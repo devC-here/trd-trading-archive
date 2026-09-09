@@ -1,0 +1,64 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+
+# Load data
+data = pd.read_csv('D:\projects\MODELS\processed_ohlcv_data.txt', delimiter='\t')
+
+# Select the best indicators and the target variable
+best_indicators = ['body_pct', 'upper_wick_pct', 'lower_wick_pct', 'volume', 'stoch', 
+                    'williams_r', 'rsi', 'ultimate_osc', 'cci', 'roc', 'cmf', 'mfi', 'direction']
+
+data = data[best_indicators]
+
+# Handling Outliers by clipping
+for column in data.columns:
+    if column != 'direction':
+        q_low = data[column].quantile(0.01)
+        q_hi = data[column].quantile(0.99)
+        data[column] = data[column].clip(lower=q_low, upper=q_hi)
+
+# Normalization/Standardization
+scaler = StandardScaler()
+data_scaled = pd.DataFrame(scaler.fit_transform(data.drop(columns=['direction'])), columns=data.columns[:-1])
+data_scaled['direction'] = data['direction']
+
+# Summary Statistics
+print("Summary Statistics:")
+print(data_scaled.describe())
+
+# Correlation Matrix
+plt.figure(figsize=(12, 10))
+corr_matrix = data_scaled.corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+
+# Histograms for each feature
+data_scaled.hist(bins=50, figsize=(20, 15))
+plt.suptitle('Histograms of Features')
+plt.show()
+
+# Box Plots for each feature
+plt.figure(figsize=(20, 15))
+sns.boxplot(data=data_scaled)
+plt.xticks(rotation=90)
+plt.title('Box Plot for Each Feature')
+plt.show()
+
+# Scatter Plots for Strong Predictors vs Direction
+strong_predictors = ['stoch', 'williams_r', 'rsi', 'ultimate_osc', 'roc', 'cmf', 'cci', 'mfi']
+
+plt.figure(figsize=(20, 10))
+for i, column in enumerate(strong_predictors, 1):
+    plt.subplot(3, 3, i)
+    sns.scatterplot(x=data_scaled[column], y=data_scaled['direction'])
+    plt.title(f'{column} vs Direction')
+plt.tight_layout()
+plt.show()
+
+# Pair Plot for Strong Predictors and Direction
+sns.pairplot(data_scaled[strong_predictors + ['direction']], diag_kind='kde', markers='+')
+plt.suptitle('Pair Plot of Strong Predictors and Direction')
+plt.show()

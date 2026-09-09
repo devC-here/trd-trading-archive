@@ -1,0 +1,50 @@
+VWAP Model - Training Report
+============================================================
+Date     : 2026-06-12 18:52
+Dataset  : synthetic_vwap_dataset.csv  shape=(10000, 57)
+Features : 36  (meta excluded)
+Split    : train=8800  val=1200
+Params   : 1,152,211
+Best ep  : 3  val_loss=7.5405
+Duration : 1.1 min
+
+Head                   Acc   BalAcc   MacroF1    WtdF1
+------------------------------------------------------
+vwap_dir             0.608    0.559     0.448    0.511
+vol_char             0.470    0.569     0.409    0.476
+vwap_interaction     0.532    0.651     0.384    0.455
+inst_signal          0.488    0.560     0.352    0.569
+close_loc            0.682    0.461     0.441    0.641
+follow_through       0.423    0.471     0.391    0.381
+
+Top-30 Feature Importances (vwap_dir head permutation):
+  vwap_dist_pct                          +0.0273
+  vwap_dev_atr                           +0.0256
+  vwap_sigma                             +0.0086
+  vwap_rejection_16                      +0.0083
+  vwap_band_walk                         +0.0071
+  above_vwap_streak                      +0.0070
+  vwap_touch_density                     +0.0047
+  vol_z100                               +0.0039
+  session_vol_factor                     +0.0037
+  delta_at_vwap                          +0.0032
+  vol_surge_ctx_16                       +0.0029
+  vol_z30                                +0.0028
+  vwap_distance_16                       +0.0015
+  vwap_std_feat                          +0.0014
+  body_ratio                             +0.0011
+  vol_efficiency                         +0.0010
+  cum_delta_20z                          +0.0009
+  buy_press_z                            +0.0004
+  vwap_rejection_qual                    +0.0003
+  vwap_reclaim_qual                      +0.0003
+  vol_trend_z                            +0.0002
+  close_grav_f                           +0.0000
+  inst_fp                                +0.0000
+  price_vol_div                          -0.0001
+  vwap_slope_z                           -0.0001
+  vol_surge_extreme                      -0.0003
+  vol_mom_div                            -0.0005
+  absorption_lvl                         -0.0006
+  vwap_acceptance_16                     -0.0006
+  cum_delta_vwap_align                   -0.0006

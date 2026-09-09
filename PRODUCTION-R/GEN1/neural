@@ -1,0 +1,156 @@
+import os
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from tqdm import tqdm
+
+# Define the neural network model with additional layers and neurons
+class Net(nn.Module):
+    def __init__(self, input_size):
+        super(Net, self).__init__()
+        self.fc1 = nn.Linear(input_size, 512)   # Increased neurons
+        self.dropout1 = nn.Dropout(0.5)         # Add dropout
+        self.fc2 = nn.Linear(512, 256)          # Increased neurons
+        self.dropout2 = nn.Dropout(0.5)         # Add dropout
+        self.fc3 = nn.Linear(256, 128)          # Increased neurons
+        self.dropout3 = nn.Dropout(0.5)         # Add dropout
+        self.fc4 = nn.Linear(128, 64)           # Additional layer
+        self.dropout4 = nn.Dropout(0.5)         # Add dropout
+        self.fc5 = nn.Linear(64, 32)            # Additional layer
+        self.dropout5 = nn.Dropout(0.5)         # Add dropout
+        self.fc6 = nn.Linear(32, 1)             # Output layer
+
+    def forward(self, x):
+        x = torch.relu(self.fc1(x))
+        x = self.dropout1(x)
+        x = torch.relu(self.fc2(x))
+        x = self.dropout2(x)
+        x = torch.relu(self.fc3(x))
+        x = self.dropout3(x)
+        x = torch.relu(self.fc4(x))
+        x = self.dropout4(x)
+        x = torch.relu(self.fc5(x))
+        x = self.dropout5(x)
+        x = self.fc6(x)  # No sigmoid here
+        return x
+
+# Custom dataset to include the full dataset features
+class OHLCVDataset(Dataset):
+    def __init__(self, dataframe):
+        self.data = dataframe[['open', 'high', 'low', 'close', 'real_volume', 'direction', 'next_close']].values
+        self.labels = dataframe['price_move_010'].astype(float).values  # Labels for training
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        data = torch.tensor(self.data[idx], dtype=torch.float32)
+        label = torch.tensor(self.labels[idx], dtype=torch.float32)  # Float for BCEWithLogitsLoss
+        return data, label
+
+# Load data
+data_path = r'd:\projects\MODELS\processed_ohlcv_data.txt'
+df = pd.read_csv(data_path, delimiter='\t')
+
+# Normalize data
+scaler = MinMaxScaler()
+df[['open', 'high', 'low', 'close', 'real_volume', 'next_close']] = scaler.fit_transform(
+    df[['open', 'high', 'low', 'close', 'real_volume', 'next_close']]
+)
+
+# Drop rows with NaNs
+df.dropna(inplace=True)
+
+# Split data into training and testing sets
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+# Create datasets and dataloaders
+train_dataset = OHLCVDataset(train_df)
+test_dataset = OHLCVDataset(test_df)
+train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
+# Initialize the model
+input_size = len(['open', 'high', 'low', 'close', 'real_volume', 'direction', 'next_close'])  # Adjusted input size
+model = Net(input_size)
+
+# Check if a saved model exists
+model_path = 'model.pth'
+if os.path.exists(model_path):
+    try:
+        print("Loading saved model...")
+        saved_state_dict = torch.load(model_path)
+        model.load_state_dict(saved_state_dict)
+    except RuntimeError as e:
+        print(f"Error loading saved model: {e}")
+        print("Reinitializing a new model...")
+else:
+    print("No saved model found. Initializing a new model...")
+
+# Define the loss function and optimizer
+criterion = nn.BCEWithLogitsLoss()  # Use BCEWithLogitsLoss
+optimizer = optim.Adam(model.parameters(), lr=0.001)
+scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=100, gamma=0.1)  # Learning rate scheduler
+
+# Early stopping parameters
+early_stopping_patience = 10
+early_stopping_counter = 0
+best_loss = float('inf')
+
+# Training loop with new data and early stopping
+num_epochs = 500
+for epoch in range(num_epochs):
+    model.train()
+    running_loss = 0.0
+    for data, labels in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs}"):
+        optimizer.zero_grad()
+        outputs = model(data)
+        loss = criterion(outputs.squeeze(), labels)
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+    scheduler.step()
+
+    avg_loss = running_loss / len(train_loader)
+    print(f"Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss}")
+
+    # Validation step
+    model.eval()
+    val_loss = 0.0
+    with torch.no_grad():
+        for data, labels in test_loader:
+            outputs = model(data)
+            loss = criterion(outputs.squeeze(), labels)
+            val_loss += loss.item()
+    val_loss /= len(test_loader)
+    print(f"Validation Loss: {val_loss}")
+
+    # Check for early stopping
+    if val_loss < best_loss:
+        best_loss = val_loss
+        torch.save(model.state_dict(), model_path)
+        print(f"Model saved as '{model_path}'")
+        early_stopping_counter = 0
+    else:
+        early_stopping_counter += 1
+
+    if early_stopping_counter >= early_stopping_patience:
+        print("Early stopping triggered. Training stopped.")
+        break
+
+# Evaluate the updated model
+model.eval()
+correct = 0
+total = 0
+with torch.no_grad():
+    for data, labels in test_loader:
+        outputs = model(data)
+        predicted = (torch.sigmoid(outputs).squeeze() > 0.5).long()
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
+print(f"Accuracy: {100 * correct / total}%")

@@ -1,0 +1,82 @@
+🟦 MOMENTUM (Direction & Force)
+Output	Sheet Meaning
+momentum_state = 0	Market is bearish (net downside pressure)
+momentum_state = 1	No real momentum (drift / balance)
+momentum_state = 2	Market is bullish (net upside pressure)
+momentum_slope_zone = 0	Momentum losing strength
+momentum_slope_zone = 1	Momentum stable
+momentum_slope_zone = 2	Momentum accelerating
+entry_bias = 0	Prefer shorts
+entry_bias = 1	Neutral / wait
+entry_bias = 2	Prefer longs
+
+Sheet intuition:
+
+Momentum tells which side is pushing and whether that push is strengthening or dying.
+
+🟨 BREAKOUT / SQUEEZE (Regime)
+Output	Sheet Meaning
+squeeze_state = 0	Volatility compressed (energy building)
+squeeze_state = 1	Just released from squeeze
+squeeze_state = 2	Fully expanded (late move)
+breakout_bias = 0	Downside expansion favored
+breakout_bias = 1	No directional edge
+breakout_bias = 2	Upside expansion favored
+entry_viability = 0	Bad timing
+entry_viability = 1	Acceptable
+entry_viability = 2	Good timing
+
+Sheet intuition:
+
+Breakout tells whether market wants to move and in which direction — not whether to enter immediately.
+
+🟩 VWAP + VOLUME (Acceptance)
+Output	Sheet Meaning
+vwap_zone = 0	Price accepted below VWAP (bearish)
+vwap_zone = 1	Price rotating around VWAP (balanced)
+vwap_zone = 2	Price accepted above VWAP (bullish)
+is_above_vwap = 1	Intraday bullish positioning
+volume_pressure = 0	Selling pressure
+volume_pressure = 1	Neutral volume
+volume_pressure = 2	Buying pressure
+liquidity_structure = 0	Thin / risky
+liquidity_structure = 1	Normal
+liquidity_structure = 2	Thick / supportive
+
+Sheet intuition:
+
+VWAP answers: Is price being accepted here or rejected?
+
+🟥 MICROSTRUCTURE (Trap vs Clean)
+Output	Sheet Meaning
+micro_risk_zone = 0	Trap / stop-hunt zone
+micro_risk_zone = 1	Neutral
+micro_risk_zone = 2	Safe / supportive
+burst_type = 0	Absorption
+burst_type = 1	Impulse / burst
+burst_type = 2	Exhaustion
+tail_pressure_direction = 0	Downside rejection
+tail_pressure_direction = 1	Mixed
+tail_pressure_direction = 2	Upside rejection
+
+Sheet intuition:
+
+Microstructure tells whether candles are lying or telling the truth.
+
+🟪 CANDLE SEQUENCE (Price Story)
+Output	Sheet Meaning
+sequence_type = 0	Noise
+sequence_type = 1	Reversal
+sequence_type = 2	Pullback / correction
+sequence_type = 3	Continuation
+sequence_type = 4	Strong bearish continuation
+candle_dominance = 0	Bearish control
+candle_dominance = 1	Mixed
+candle_dominance = 2	Bullish control
+pattern_strength = 0	Weak
+pattern_strength = 1	Usable
+pattern_strength = 2	Strong
+
+Sheet intuition:
+
+Candles describe how price is moving, not why.

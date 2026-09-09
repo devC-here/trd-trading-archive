@@ -1,0 +1,377 @@
+{
+    "market_condition": "breakout_bear_vol_expansion_005",
+    "momentum": {
+        "momentum_state": {
+            "pred": 0,
+            "label": "down",
+            "conf": 0.994,
+            "probs": {
+                "down": 0.994,
+                "neutral": 0.0017,
+                "up": 0.0043
+            }
+        },
+        "momentum_slope": {
+            "pred": 1,
+            "label": "flat",
+            "conf": 0.5958,
+            "probs": {
+                "falling": 0.1383,
+                "flat": 0.5958,
+                "rising": 0.2659
+            }
+        },
+        "regime": {
+            "pred": 2,
+            "label": "trending",
+            "conf": 0.9388,
+            "probs": {
+                "ranging": 0.0051,
+                "weak_trend": 0.0048,
+                "trending": 0.9388,
+                "breakout": 0.0513
+            }
+        },
+        "volatility_state": {
+            "pred": 1,
+            "label": "normal",
+            "conf": 0.834,
+            "probs": {
+                "contracting": 0.1221,
+                "normal": 0.834,
+                "expanding": 0.0439
+            }
+        },
+        "structure_bias": {
+            "pred": 0,
+            "label": "bearish",
+            "conf": 0.9916,
+            "probs": {
+                "bearish": 0.9916,
+                "neutral": 0.0022,
+                "bullish": 0.0062
+            }
+        },
+        "entry_quality": {
+            "pred": 1,
+            "label": "wait",
+            "conf": 0.9844,
+            "probs": {
+                "avoid": 0.008,
+                "wait": 0.9844,
+                "go": 0.0076
+            }
+        },
+        "_summary": {
+            "momentum": "down",
+            "slope": "flat",
+            "regime": "trending",
+            "vol": "normal",
+            "structure": "bearish",
+            "signal": "wait",
+            "signal_conf": 0.9844
+        },
+        "_features": {
+            "ret_3_atr_norm": -1.923162567716627,
+            "ret_3_z": 0.35594020642026164,
+            "efficiency_ratio": 0.9999999999002991,
+            "er_slope": -1.4690471061840071e-12,
+            "momentum_persistence": -0.18742554014479,
+            "ema_slope_norm": -3.234767032118317,
+            "ema_acc_norm": 0.06892749025746102,
+            "atr_z": -0.17525504380940385,
+            "range_expansion": 0.9621289655666405,
+            "vol_regime_confirm": 0.0066370897987258586,
+            "trend_position": 0.0,
+            "break_strength": -3.0,
+            "mean_reversion_stretch": -4.0,
+            "adx_z": 0.6285591255170748,
+            "adx_slope": 0.00043574844067051366,
+            "di_balance": -0.9999964905647181,
+            "tk_spread": -3.0,
+            "cloud_thickness": 5.0,
+            "price_vs_cloud": -4.0,
+            "cloud_twist": -1.0,
+            "don_position": 0.006100660904627295,
+            "don_width_z": 0.006524075669880845,
+            "don_breakout": -3.0,
+            "momentum_decay": 1.200121643746694,
+            "tension": -0.9615812838583135,
+            "ret_10_atr_norm": -6.747167063007855,
+            "ret_10_z": -0.0018401499832298713,
+            "slope_alignment": 1.0,
+            "volume_z": -0.022137400786084345,
+            "vol_displacement": -0.007879591005406923
+        }
+    },
+    "breakout": {
+        "squeeze_state": {
+            "class": 0,
+            "label": "no_squeeze",
+            "confidence": 0.9999607801437378,
+            "probs": {
+                "no_squeeze": 1.0,
+                "forming": 0.0,
+                "active": 0.0,
+                "overdue": 0.0
+            }
+        },
+        "breakout_direction": {
+            "class": 0,
+            "label": "bearish",
+            "confidence": 0.999990701675415,
+            "probs": {
+                "bearish": 1.0,
+                "neutral": 0.0,
+                "bullish": 0.0
+            }
+        },
+        "breakout_quality": {
+            "class": 0,
+            "label": "no_breakout",
+            "confidence": 0.9994578957557678,
+            "probs": {
+                "no_breakout": 0.9995,
+                "false": 0.0003,
+                "developing": 0.0002,
+                "confirmed": 0.0
+            }
+        },
+        "volatility_phase": {
+            "class": 3,
+            "label": "expanding",
+            "confidence": 0.9999256134033203,
+            "probs": {
+                "deeply_compressing": 0.0001,
+                "compressing": 0.0,
+                "transitioning": 0.0,
+                "expanding": 0.9999
+            }
+        },
+        "band_structure": {
+            "class": 1,
+            "label": "mid_range",
+            "confidence": 0.9999659061431885,
+            "probs": {
+                "lower_walk": 0.0,
+                "mid_range": 1.0,
+                "upper_walk": 0.0
+            }
+        },
+        "entry_timing": {
+            "class": 0,
+            "label": "avoid",
+            "confidence": 0.9999847412109375,
+            "probs": {
+                "avoid": 1.0,
+                "wait": 0.0,
+                "now": 0.0
+            }
+        },
+        "signal": "avoid",
+        "confidence": 0.9999847412109375
+    },
+    "vwap": {
+        "vwap_zone": {
+            "class": 1,
+            "label": "below_1sd",
+            "confidence": 0.997952938079834,
+            "probs": {
+                "below_2sd": 0.001,
+                "below_1sd": 0.998,
+                "near_vwap": 0.001,
+                "above_1sd": 0.0,
+                "above_2sd": 0.0
+            }
+        },
+        "volume_character": {
+            "class": 1,
+            "label": "normal",
+            "confidence": 0.9993818998336792,
+            "probs": {
+                "absence": 0.0001,
+                "normal": 0.9994,
+                "surge": 0.0005,
+                "climax_surge": 0.0
+            }
+        },
+        "inst_pressure": {
+            "class": 1,
+            "label": "neutral",
+            "confidence": 0.999957799911499,
+            "probs": {
+                "selling": 0.0,
+                "neutral": 1.0,
+                "buying": 0.0
+            }
+        },
+        "vwap_interaction": {
+            "class": 0,
+            "label": "rejection",
+            "confidence": 0.9999868869781494,
+            "probs": {
+                "rejection": 1.0,
+                "testing": 0.0,
+                "reclaim": 0.0,
+                "walk": 0.0
+            }
+        },
+        "volume_trend": {
+            "class": 2,
+            "label": "building",
+            "confidence": 0.5736244916915894,
+            "probs": {
+                "declining": 0.0,
+                "stable": 0.4264,
+                "building": 0.5736
+            }
+        },
+        "vwap_signal": {
+            "class": 1,
+            "label": "wait",
+            "confidence": 0.9998719692230225,
+            "probs": {
+                "avoid": 0.0001,
+                "wait": 0.9999,
+                "act": 0.0
+            }
+        },
+        "signal": "wait",
+        "confidence": 0.9998719692230225
+    },
+    "microstructure": {
+        "flow_dominance": {
+            "class": 2,
+            "label": "buyer_dominated",
+            "confidence": 0.5784774422645569,
+            "probs": {
+                "seller_dominated": 0.1778,
+                "contested": 0.2438,
+                "buyer_dominated": 0.5785
+            }
+        },
+        "bar_intent": {
+            "class": 2,
+            "label": "impulse",
+            "confidence": 0.7197566032409668,
+            "probs": {
+                "absorption": 0.0131,
+                "rejection": 0.2672,
+                "impulse": 0.7198,
+                "exhaustion": 0.0
+            }
+        },
+        "cluster_state": {
+            "class": 2,
+            "label": "mature",
+            "confidence": 1.0,
+            "probs": {
+                "no_cluster": 0.0,
+                "building": 0.0,
+                "mature": 1.0,
+                "climax": 0.0
+            }
+        },
+        "rejection_structure": {
+            "class": 1,
+            "label": "upper",
+            "confidence": 0.9934549927711487,
+            "probs": {
+                "none": 0.0001,
+                "upper": 0.9935,
+                "lower": 0.0,
+                "dual": 0.0065
+            }
+        },
+        "absorption_state": {
+            "class": 1,
+            "label": "passive",
+            "confidence": 0.7226706147193909,
+            "probs": {
+                "none": 0.1307,
+                "passive": 0.7227,
+                "active": 0.1467
+            }
+        },
+        "micro_signal": {
+            "class": 0,
+            "label": "avoid",
+            "confidence": 0.9934343099594116,
+            "probs": {
+                "avoid": 0.9934,
+                "wait": 0.0043,
+                "act": 0.0023
+            }
+        },
+        "signal": "avoid",
+        "confidence": 0.9934343099594116
+    },
+    "candle": {
+        "pattern_type": {
+            "class": 1,
+            "label": "impulse_bear",
+            "confidence": 0.8293900489807129,
+            "probs": {
+                "impulse_bull": 0.1258,
+                "impulse_bear": 0.8294,
+                "pin_bull": 0.0006,
+                "pin_bear": 0.0432,
+                "inside_coil": 0.0008,
+                "indecision": 0.0002
+            }
+        },
+        "seq_dominance": {
+            "class": 0,
+            "label": "bear_dominant",
+            "confidence": 0.5007756352424622,
+            "probs": {
+                "bear_dominant": 0.5008,
+                "contested": 0.4973,
+                "bull_dominant": 0.002
+            }
+        },
+        "conviction": {
+            "class": 1,
+            "label": "medium",
+            "confidence": 0.9999569654464722,
+            "probs": {
+                "low": 0.0,
+                "medium": 1.0,
+                "high": 0.0
+            }
+        },
+        "wick_pressure": {
+            "class": 0,
+            "label": "upper",
+            "confidence": 0.49998295307159424,
+            "probs": {
+                "upper": 0.5,
+                "balanced": 0.4934,
+                "lower": 0.0066
+            }
+        },
+        "seq_phase": {
+            "class": 3,
+            "label": "exhausting",
+            "confidence": 0.6981821656227112,
+            "probs": {
+                "coiling": 0.0001,
+                "ignition": 0.0224,
+                "trending": 0.2794,
+                "exhausting": 0.6982
+            }
+        },
+        "candle_signal": {
+            "class": 1,
+            "label": "wait",
+            "confidence": 0.8982322216033936,
+            "probs": {
+                "avoid": 0.0134,
+                "wait": 0.8982,
+                "act": 0.0884
+            }
+        },
+        "signal": "wait",
+        "confidence": 0.8982322216033936
+    }
+}

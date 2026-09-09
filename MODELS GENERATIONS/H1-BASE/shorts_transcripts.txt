@@ -1,0 +1,1526 @@
+=== [1] 100+ Followers Asked for This Algo Backtest — Results Are Shocking ===
+Link: https://www.youtube.com/shorts/LuWydLXj1DE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [2] 21 Saal Mein $1M — Trading Geek Strategy Algo Backtested ===
+Link: https://www.youtube.com/shorts/HusI4Lh7F6Q
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [3] Tata Motors Chhodi, Trader Bane — Milind Upasani Strategy Algo Backtest ===
+Link: https://www.youtube.com/shorts/uZ0i8fDNihw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [4] "Most Subscribed Forex Trader's Strategy — Full Algo Backtest ===
+Link: https://www.youtube.com/shorts/Em-Ao3orPbU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [5] Stop Being Manipulated — Trade the Trap With This Algo Setup ===
+Link: https://www.youtube.com/shorts/zJ0o4SDUYDY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [6] Renko Chart Strategy Algo Backtested — 35% Return on 10 Lakh ===
+Link: https://www.youtube.com/shorts/IkCC_gC-wXQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [7] Motilal Oswal Expert's Options Strategy — Full Algo Backtest ===
+Link: https://www.youtube.com/shorts/2IbDEwOU4Jg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [8] ICT Breaker Block Algo Backtest — Most Traders Miss This Setup ===
+Link: https://www.youtube.com/shorts/B-Y_5S0kVpQ
+
+आईसीटी यानी इनर सर्कल ट्रेडर कांसेप्ट्स की वह सीक्रेट स्ट्रेटजी जो बहुत कम ट्रेडर्स जानते हैं इसीलिए फायदा नहीं उठा पाते। आज मैं उसी स्ट्रेटजी को आपके साथ शेयर करूंगा और जो मैंने उसका एल्गो बना के बैक टेस्ट किया है वो रिजल्ट्स भी सांझा करूंगा। स्ट्रेटजी में पहले ट्रेंड देखो अगर हायर हाईज और हायर लोस बन रहे हैं तो अप ट्रेंड है। जब मार्केट स्ट्रक्चर शिफ्ट हो तब ढूंढो बेयरिश ब्रेकर ब्लॉक मतलब ऐसा बुलिश ऑर्डर ब्लॉक जो फेल हो गया हो। फिर प्राइस जब वापस इस बेरिश ब्रेकर ब्लॉक को रीिटेस्ट करे पर कैंडल की बॉडी इसके अंदर क्लोज करनी चाहिए। वहां सेल एंट्री लो। स्टॉप लॉस होगा इस ब्रेकर ज़ोन के ऊपर। टारगेट 1:2 का। बाय ट्रेड्स के लिए आपको बिल्कुल उल्टा करना है। और हां, अगर आप किसी भी स्ट्रेटजी को ऑटोमेटिकली ट्रेड करना चाहते हो, तो आप मेरे चैनल को फॉलो करके मेरी टीम के साथ कनेक्ट कर सकते हो Telegram पे। लिंक चैनल की प्रोफाइल पे दिया हुआ है। बैक टेस्ट किया मैंने Python पे एल्गो बना के ब्रोकर से डाटा लेके। साल का रिटर्न आया 61% विन रेट 47.9% और ये रहा इक्विटी कर्व ड्रॉन सिर्फ 10.7% का और पीएनएल डिस्ट्रीब्यूशन
+
+------------------------------------------------------------
+
+=== [9] 833 EMA Strategy Algo Backtest — Does Wizard Trader's Claim Hold? ===
+Link: https://www.youtube.com/shorts/FaHKCazt49A
+
+विजिट ट्रेडर जिनके 7.92 लैस YouTube पे और 3.52 लैक्स फॉलोवर्स हैं Instagram पे। इनकी 833 नाम की ये स्ट्रेटजी है जिसे खुद यूज करते हैं। बहुत सिंपल और बड़े रिटर्न्स देने का दावा भी है। तो मैंने इसको एल्गो बना के बैक टेस्ट किया ताकि पता चले ये स्ट्रेटजी कितनी प्रॉफिटेबल है। स्ट्रेटजी में 5 मिनट चार्ट पे दो ईएमएस लगाओ 8 और 33। जब 8 एमए 33 ईएमए के ऊपर हो और प्राइस भी दोनों से ऊपर हो तो सिर्फ बाय करना है। अब वेट करो जब तक प्राइस वापस 33 ईएमए पे आए वहां एक स्ट्रांग बड़ी बॉडी वाली ग्रीन कैंडल बने उसे डोमिनेंस कैंडल कहते हैं। उस कैंडल का हाई जब अगली कैंडल तोड़े तभी बाय एंट्री लो स्टॉप लॉस नीचे वाले स्विंग लो पे टारगेट मेजर रेजिस्टेंस ज़ोन तक। अगर आपको स्विंग ट्रेडिंग के लिए स्ट्रेटजी लगानी है तो ये वन ऑवर या फोर आवर टाइम फ्रेम यूज करने को कहते हैं। सेल के लिए बिल्कुल उल्टा करना है। रिजल्ट्स देखने से पहले मैं आपको बता दूं कि अगर आपको क्रिप्टो की बेस्ट एल्गो सेटअप चाहिए या आप किसी भी स्ट्रेटजी को ऑटोमेट करवाना चाहते हैं ताकि आपके ट्रेड्स खुद लगे तो आप मुझे फॉलो करके मेरी टीम के साथ कनेक्ट कर सकते हैं। Telegram पे लिंक प्रोफाइल पे दिया हुआ है। पैक टेस्ट किया मैंने Python पे एल्गो बनाके ब्रोकर से डाटा लेके साल का रिटर्न आया 63.2% विन रेट 57.8% और यह रहा इक्विटी कर्व ड्रॉ डाउन 18.1% का और पीएनएल डिस्ट्रीब्यूशन मिशन
+
+------------------------------------------------------------
+
+=== [10] William Fractal Scalping — I Algo Backtested Neeraj Joshi's Claim ===
+Link: https://www.youtube.com/shorts/_0d1qw3p-wQ
+
+नीरज जोशी जिनके 5.16 मिलियन YouTube पे और 3,70,000 फॉलोवर्स हैं Instagram पे। उन्होंने शेयर की है अपनी एक ऐसी स्ट्रेटजी जिसप उनको बहुत कॉन्फिडेंस है कि इससे आप खूब पैसा बना सकते हो और यह कोई भी बिगिनर आसानी से यूज कर सकता है। तो मैंने इनके इस दावे को चेक करने के लिए एल्गो से बैक टेस्ट किया इनकी स्ट्रेटजी को। स्ट्रेटजी में पहले फोर आवर चार्ट पे विलियम फ्रैक्टल इंडिकेटर लगाओ जो ऑटोमेटिकली स्विंग हाई और स्विंग लो मार्क कर देता है एरो दिखा के। तो आप उस हाई या लो पे लाइन बना लो सबसे पहले। फिर 5 मिनट पे आओ और इंडिकेटर आप बंद कर दो। जब प्राइस 4 आवर के स्विंग हाई को तोड़ के वापस उसी लेवल के नीचे क्लोज करे समझ जाओ कि ब्रेकआउट ट्रेडर्स फंस गए। वहीं आपको सेल एंट्री लेनी है। स्टॉप लॉस जो हाई बना है ब्रेकआउट के बाद उसके थोड़ा ऊपर टारगेट फिक्स 1:2 का। बाय ट्रेड्स के लिए बिल्कुल इसका उल्टा करना है। रिजल्ट्स देखने से पहले मैं आपको बता दूं कि अगर आपको किसी भी स्ट्रेटजी का ऑटोमेशन करवाना है ताकि आपके ट्रेड्स खुद लगे। चाहे वह इंडियन मार्केट हो या गोल्ड या क्रिप्टो या कोई और तो आप मुझे फॉलो करके मेरी टीम के साथ कनेक्ट कर सकते हैं Instagram और Telegram पे। लिंक प्रोफाइल में दिया हुआ है। अभी स्क्रीन पे आप देख पा रहे हैं। और जल्द ही मैं अपने प्यारे फॉलोवरर्स के लिए बहुत स्पेशल एल्गो ल्च करने वाला हूं। तो इसीलिए आप अपनी नोटिफिकेशंस अभी यहां से ऑन कर लें। नहीं तो आप यह सुनहरा मौका मिस कर देंगे। बैक टेस्ट किया मैंने Python पे एल्गो बना के ब्रोकर से डाटा लेके साल का रिटर्न आया 35% विन रेट 55% और यह रहा इक्विटी कर्व ड्रॉडाउन 23.5% का और पीएनएल डिस्ट्रीब्यूशन
+
+------------------------------------------------------------
+
+=== [11] Kushal Varshney Algo Setup — Independence Day Lifetime Offer ===
+Link: https://www.youtube.com/shorts/WKnvWQdyFOw
+
+हेलो ट्रेडर्स, अपने आप को 15 अगस्त में आजाद समझने की गलती मत कर देना। मैनुअल ट्रेडिंग करते हो और खुद को आजाद समझते हो। हर वक्त स्क्रीन देखते हो, चार्ट्स एनालाइज करते हो और जब ना देखो तो सेटअप मिस हो जाता है और साइकोलॉजी तुम्हें कभी जीने नहीं देती। इसको इंडिपेंडेंस तुम बोल सकते हो ट्रेडिंग में? बिल्कुल नहीं। लेकिन इस वीडियो के एंड में एक ऑफर है जिससे आप ट्रेडिंग में भी इंडिपेंडेंट हो सकते हो। 140 से ज्यादा स्ट्रेटजीस को मैंने बैक टेस्ट किया जिससे लाखों ट्रेडर्स का फायदा हुआ और हजारों ने मेरे से ऑटोमेशन करवाया अलग-अलग स्ट्रेटजीस का। फायदा तुम अपनी जिंदगी में मजे कर सकते हो। अपने काम बिजनेस पे ध्यान दे सकते हो। अपनी फैमिली को टाइम दे सकते हो और आपके जो ट्रेड्स हैं वो बेस्ट सेटअप के बेस पे खुद लगेंगे और खुद ही एग्जिट होंगे। इसे कहते हैं आजादी। इसीलिए आज मैं इंडिपेंडेंस डे में सिर्फ अपने फॉलोअर्स को वन ऑफ़ द मोस्ट डिमांडेड एल्गो सेटअप्स दे रहा हूं जो कुशल वाशिनी जी का है जिसमें सबसे छोटे स्टॉप लॉस और सबसे बड़े टारगेट देने की क्षमता है और इसका रियल कॉस्ट हर कोई बियर नहीं कर सकता क्योंकि ये काफी डिमांडिंग है लेकिन मैं इसका एक्सेस अपने फॉलोवरर्स को लाइफ टाइम के लिए दे रहा हूं। सिर्फ इसको बनाने में जो नॉर्मल कॉस्ट आता है उतने में ही। तो जिन भी मेरे प्यारे फॉलोवर्स को ये एल्गो सेटअप चाहिए ताकि उनके ट्रेड्स इस स्ट्रेटजी के बेस पर लगे तो वह मेरी टीम से टेलीग्राम पर कनेक्ट कर सकते हैं। Telegram पेज का लिंक मैं कमेंट और डिस्क्रिप्शन में डाल दूंगा। बस दो बातें याद रखें। ये सबके लिए नहीं है। यह सिर्फ मेरे फॉलोवरर्स के लिए है जो शुरू से मेरे साथ है। तो आपको यह प्रूव करना होगा और दूसरा यह ऑफर सिर्फ 17 अगस्त तक है। तो ये मेरी तरफ से मेरे फॉलोअर्स को ट्रेडिंग में आजादी देने का एक प्रयास है। और इस मंथ में एक बहुत बड़ा सरप्राइज आने वाला है। लाइफ चेंजिंग होगा वो। मेरे सभी फॉलोअर्स व्यूअर्स को मेरी रिक्वेस्ट है कि वो चैनल को सब्सक्राइब फॉलो करके नोटिफिकेशंस ऑन जरूर कर लें ताकि आप ये ऑफर्स मिस ना कर दें।
+
+------------------------------------------------------------
+
+=== [12] Stock Burner's 1:33 RR Claim — I Algo Backtested It on 1 Lakh ===
+Link: https://www.youtube.com/shorts/Q2EyAXyrcV0
+
+यह हैं स्टॉक बर्नर जिनके 1.27 मिलियन YouTube पे और 1.5 मिलियन फॉलोवर्स हैं Instagram पे। इन्होंने 2026 के लिए एक स्ट्रेटजी शेयर की है अपने चैनल पे जिससे ये 1:23 तक का हाई रिस्क रिवॉर्ड बनाने का क्लेम करते हैं। ध्यान से देखना कि कितना बड़ा रिस्क रिवार्ड है। 1:33। तो मैंने इसको एल्गो बना के बैक टेस्ट किया ताकि पता चले कि इस दावे में कितनी सच्चाई है। स्ट्रेटजी सिंपल है। पहले 4 ऑवर और वन ऑवर चार्ट पे देखो कि ट्रेंड क्या है। अगर दोनों अप ट्रेंड दिखा रहे हैं तो सिर्फ बाय लेना है। फिर 15 मिनट पे आओ। जब प्राइस थोड़ा नीचे पुलबैक करे तो उस पुलबैक के दो लोअर स्विंग हाईस को जॉइ करके एक ट्रेंड लाइन खींचो। जब कोई कैंडल उस ट्रेंड लाइन के ऊपर क्लोज कर दे। वहीं बाय एंट्री लो। स्टॉप लॉस नीचे वाले स्विंग लो पे और टारगेट फिक्स नहीं करना है। जब तक आपका ट्रेंड चलता रहे स्टॉप लॉस को ट्रेल करते रहो। डाउन ट्रेंड में बिल्कुल उल्टा करना है। रिजल्ट्स देखने से पहले मैं आपको बता दूं कि अगर आप इस स्ट्रेटजी या किसी भी स्ट्रेटजी को ऑटोमेटिक वे में अपने ब्रोकर पे ट्रेड करना चाहते हो तो आप मुझे फॉलो करके कनेक्ट कर सकते हो मेरी टीम के साथ Instagram और Telegram पे मुझे मैसेज करके। बाकी मैंने अपने सभी फॉलोवरर्स को पहले भी बताया था कि मेरे WhatsApp ग्रुप्स काम नहीं कर रहे हैं ड्यू टू मेटा इशू। तो जो भी वहां मेरे फॉलोवरर्स बने हुए हैं तो वहां बिल्कुल इंतजार मत करो किसी अपडेट का या वीडियो के अलर्ट का। आप अभी याद से Instagram और YouTube पे अपनी नोटिफिकेशंस ऑन कर लो ताकि एक तो आप कोई भी बैक टेस्टेड स्ट्रेटजी वीडियोस मिस ना करो और दूसरा मैं जल्द ही कुछ सिर्फ अपने फॉलोअर्स के लिए ल्च करने वाला हूं। तो वो भी आप मिस कर देंगे। उसमें लिमिटेड स्लॉट्स हैं तो अभी अपनी Instagram और YouTube पे नोटिफिकेशंस ऑन कर लें। बैक टेस्ट किया मैंने Python पे एल्गो बना के ब्रोकर से डाटा लेके। साल का रिटर्न आया 47.4% का इस स्ट्रेटजी का विन रेट 48% और यह रहा इक्विटी कर्व ड्रॉन 21% का और पीएनएल डिस्ट्रीब्यूशन
+
+------------------------------------------------------------
+
+=== [13] 74% Return in 1 Year — Vishal Malkan Options Strategy Algo Backtest ===
+Link: https://www.youtube.com/shorts/qJR6gR94Ars
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [14] Why Traders Lose on Supply Demand — SLC Strategy Algo Backtest ===
+Link: https://www.youtube.com/shorts/snzJ4zWZXno
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [15] Lakhon Kamaane Wali Strategy — 1 Year Algo Backtest Results ===
+Link: https://www.youtube.com/shorts/N3o-py_LA3A
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [16] 0 Stop Losses in 3 Months? I Algo Backtested This Options Strategy ===
+Link: https://www.youtube.com/shorts/gjAMOKX020A
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [17] Copy Kiya Mera Content — Algowithwahid Exposed ===
+Link: https://www.youtube.com/shorts/IEM0qusS5gQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [18] ICT Order Block Strategy Backtested — 74% Return in 1 Year ===
+Link: https://www.youtube.com/shorts/4W3SUtxl0u8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [19] 400-1200% Return Claim? I Algo Backtested This Forex Strategy ===
+Link: https://www.youtube.com/shorts/Da7WDEkNqxs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [20] I Algo Backtested This SMC Strategy — 99.9% Returns in 1 Year ===
+Link: https://www.youtube.com/shorts/LkTzH_5xiJ0
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [21] First-Ever ETF Strategy Algo Backtest — 129% Return in 5 Years ===
+Link: https://www.youtube.com/shorts/QMkLD2FmtKg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [22] 80% Win Rate Claim of Sandwich pattern Strategy? I Backtested This Paid Strategy ===
+Link: https://www.youtube.com/shorts/t9VzgJhqgHk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [23] $2 Lakh in 3 Months? I Algo Backtested This SMC Strategy ===
+Link: https://www.youtube.com/shorts/pBJtFu6uzWY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [24] I Algo Backtested a US Trader's 8AM SMC Setup (ICT + FVG) ===
+Link: https://www.youtube.com/shorts/ok2n_YqSHao
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [25] 93% Win Rate in 15 Minutes? Algo Backtesting the 3 PM Setup ===
+Link: https://www.youtube.com/shorts/H7Ekq08zO0w
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [26] London Session Ka Yeh Setup — Prop Trader Ka Secret? ===
+Link: https://www.youtube.com/shorts/_bdNNLDEyOU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [27] Booming Bulls (Anish Thakur) SECRET Gold FRVP Strategy — Algo Backtested! ===
+Link: https://www.youtube.com/shorts/5_dsZODE88w
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [28] ICT Sniper Entry Trading Strategy — 64% Win Rate, Only 12% Drawdown (Algo Backtest) ===
+Link: https://www.youtube.com/shorts/bffQ8_1ShO8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [29] This RSI trading strategy gave 60% win rate in Algo-backtest. ===
+Link: https://www.youtube.com/shorts/ryoDybQXEs4
+
+ज्यादातर लोग आरएसआई को उल्टा यूज़ करते हैं। ओवरसोल्ड देखा तुरंत एंट्री और वही गलती उनको ले डूबती है। सही तरीका यह है। रूल नंबर वन सिर्फ अप ट्रेंड में ट्रेड करो। प्राइस 50 ईएमए के ऊपर होना चाहिए। मतलब आप बड़े ट्रेंड के साथ हो उसके खिलाफ नहीं। अब वेट करो जब आरएसआई 30 के नीचे गिर कर ओवरसोल्ड हो पर तुरंत मत कूद। कंफर्मेशन लो। जब आरएसआई वापस 30 के ऊपर क्रॉस करे और एक बुलिश कैंडल बने तब एंट्री लो। स्टॉप लॉस उस पुलबैक के लो के नीचे  टारगेट पिछला स्विंग हाई। और एक बड़ी अपडेट अगर आपको मेरी एल्गो WhatsApp कम्युनिटी ज्वाइन करनी हो तो एल्गो कमेंट कर देना। अब देखते हैं एल्गो बैक टेस्ट के रिजल्ट्स। एक साल का रिटर्न 47.6% विन रेट 60.7% एवरेज रिवॉर्ड रिस्क के दुगने से भी ज्यादा। ड्रॉ डाउन 18.2% और यह रहा बाकी डाटा और चार्ट्स। ऐसे ही डेली बैक टेस्टेड स्ट्रेटजीस को देखने के लिए चैनल को सब्सक्राइब कर सकते
+
+------------------------------------------------------------
+
+=== [30] 40% Win Rate, Still Very Good Return? Supertrend Swing Strategy Backtest 🤯 ===
+Link: https://www.youtube.com/shorts/YwDleTVqM5c
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [31] VWAP Pullback Strategy Nifty 50 | 1 Year Backtest = 54% Win Rate 🎯 ===
+Link: https://www.youtube.com/shorts/7ircBjxjvNE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [32] This EMA Strategy Got 50%+ Return in Backtest — Full Breakdown ===
+Link: https://www.youtube.com/shorts/R7kX_T4ZtNo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [33] This FVG Strategy Works on Stocks, Forex, Crypto, Futures — I Backtested it using Algo. ===
+Link: https://www.youtube.com/shorts/chd52r-pzx0
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [34] No Indicators, Just ONE Candle — Nifty Scalping Strategy Algo-Backtested ===
+Link: https://www.youtube.com/shorts/AD36fIiJWVs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [35] 1:20 Minimum RR? I Put TG Capital's ICT Strategy Through the Algo Backtest!! ===
+Link: https://www.youtube.com/shorts/ZWSeWYom1Yg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [36] The Strategy Behind a $2.5M World Record Prop Firm Payout — Algo Tested ===
+Link: https://www.youtube.com/shorts/JSdMC4aUAJw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [37] Algo Trading Explained in the Funniest Way Possible 😂 | Tukkaram Ep 1 ===
+Link: https://www.youtube.com/shorts/gTwM0hI2wY0
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [38] $5M Trader's 2026 Strategy — ORB + FVG Algo Backtest Results ===
+Link: https://www.youtube.com/shorts/H4ywhrdLU1s
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [39] The Trading Geek Price Action Strategy — Algo Backtest (Gold + Forex) ===
+Link: https://www.youtube.com/shorts/aPEzamtaYw4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [40] This 10 EMA Strategy Claims 1:10 Risk Reward — I Backtested It ===
+Link: https://www.youtube.com/shorts/FYfQqZ3bM6g
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [41] Umar Punjabi Gold Strategy Exposed! (1-Year Python Algo Backtest) ===
+Link: https://www.youtube.com/shorts/uXG8eHYhG9E
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [42] I Turned This Classical Fibonacci Strategy Into a High-Speed Algo Printing Machine! (Full Backtest) ===
+Link: https://www.youtube.com/shorts/1nOpTr6aNjQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [43] Testing India's Top Fintech Platforms: Part 1 (Hedged Titan Prime Algo Backtest) ===
+Link: https://www.youtube.com/shorts/f4tfFaagDwM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [44] Gomathi Shankar CPR Strategy Exposed! (1-Year Python Algo Backtest) ===
+Link: https://www.youtube.com/shorts/i5eNsT9GFDM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [45] 62% Win Rate with This Multi-Timeframe MACD Setup! (Algo Backtest Results) ===
+Link: https://www.youtube.com/shorts/aUKmS6ZDeq4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [46] Stock Learners Liquidity Strategy Exposed! (Python Algo Backtest Results) ===
+Link: https://www.youtube.com/shorts/H7ejx22Yf0Q
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [47] Neeraj Joshi SMC Liquidity Strategy Exposed! (Shocking 1-Year Algo Backtest Results) ===
+Link: https://www.youtube.com/shorts/2EZZCKmBrAI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [48] 52% Return With Secret MTF Strategy! (Hold with Priyank Strategy Algo Backtest) ===
+Link: https://www.youtube.com/shorts/fipzUyTxUxw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [49] 44% Return With Low Drawdown! (SMC Breaker Block Strategy ka Algo Backtest) ===
+Link: https://www.youtube.com/shorts/AkoRQx8SDLc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [50] Topgtraders Fibonacci Strategy Exposed! (Python Algo Backtest Results) ===
+Link: https://www.youtube.com/shorts/jV0PYmvOl24
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [51] Why 90% of Retail Traders Use Fibonacci Wrong! (Golden Phantom Zone Algo Backtest) ===
+Link: https://www.youtube.com/shorts/epI1Clb4r54
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [52] Paisa Double in 1 Month Strategy? (King Research Academy Camarilla Pivot Strategy Algo Backtested) ===
+Link: https://www.youtube.com/shorts/GPSvVOZv-No
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [53] Testing the SMC Institutional Liquidity Hunting Strategy with Python Algo! ===
+Link: https://www.youtube.com/shorts/KWzy93pAjJ4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [54] 100-Year-Old Secret Trading Setup Revealed! (Gann Levels Strategy Algo Backtest) ===
+Link: https://www.youtube.com/shorts/Gt6x0GvAReQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [55] Anish Thakur Made $67,000 Profit! (Booming Bulls Strategy Algo Backtested) ===
+Link: https://www.youtube.com/shorts/XCy_eOqG-do
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [56] Backtesting Singapore's No.1 Trader's Secret Setup with Python Algo! ===
+Link: https://www.youtube.com/shorts/KGKC9Tkiii0
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [57] Making $4000 Daily with Just 2 Indicators? (VWAP + 8 EMA Strategy Algo Backtest) ===
+Link: https://www.youtube.com/shorts/uDGXfF1kjHI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [58] He Claimed 2100% Profit! (Trade With Pat SMC Strategy Algo-Backtest) ===
+Link: https://www.youtube.com/shorts/YPAN6XgXbQM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [59] Big Institutions Can't Hide Anymore! (Volume Profile Trading Strategy Algo-Backtest) ===
+Link: https://www.youtube.com/shorts/z2QvNrc1MYw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [60] How Big Traders Make Crores Trading Gold! (SMC Imbalance Strategy Algo Backtest) ===
+Link: https://www.youtube.com/shorts/qQgjJIBE2hk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [61] 70% of the Time Market is Sideways! Earn Profit Everyday with This Algo Setup! ===
+Link: https://www.youtube.com/shorts/kwwm_NiMYYk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [62] This Single Indicator Made Him Crores! (Bill Williams Alligator Strategy Algo-Backtested) ===
+Link: https://www.youtube.com/shorts/tW3pNDWhKHE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [63] I Algo-Backtested Bharat Jhunjhunwala’s Most Popular RSI + Bollinger Band Strategy! ===
+Link: https://www.youtube.com/shorts/4gvWmhCzE30
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [64] Backtesting Mukul Choudhary’s 1:4 Risk-Reward Trading Strategy! (Algo Results) ===
+Link: https://www.youtube.com/shorts/I7i8MnUsqJ4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [65] 7 Saal Ka FnO Trader — Sirf 1-2 Ghante Mein Trade Setup | ORB Strategy Ka Real Algo Backtest ===
+Link: https://www.youtube.com/shorts/FxUjNVugQOA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [66] I Backtested a $10,000/Month Trading Strategy on Indian Stocks! (Shocking Results) ===
+Link: https://www.youtube.com/shorts/ulkbJJzPHzE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [67] I Backtested an SMC Strategy with Python… Results Shocked Me ===
+Link: https://www.youtube.com/shorts/vb6phmFi6tY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [68] 75 Lakh per month Kamane Wali CPR Strategy Ka Algo Backtest —Aur 50K Likes Pe Free Algo Mil Raha Hai ===
+Link: https://www.youtube.com/shorts/BtZSs6DR_uk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [69] Banks Aur Prop Firms Ke Traders Ka Trainer — Uski 50 EMA Strategy Ka Algo Backtest | Ezekiel Chew ===
+Link: https://www.youtube.com/shorts/AKuM1cTgPks
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [70] LuxAlgo Ka Nadaraya Watson 100% Win Rate Claim —Aaj Woh Raaz Bataunga Jo Youtube pe Koi Nahi Batata ===
+Link: https://www.youtube.com/shorts/rXoB4mIhLjc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [71] Duniya Ka Favourite Ichimoku Indicator — Maine Algo se Backtest Kiya Aur Result Shocking rahe. ===
+Link: https://www.youtube.com/shorts/0OE0jCRge94
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [72] Institutions Yeh Strategy Use Karke Tumhare Stoploss Khaate Hain — CRT Ka Algo Backtest | ICT PO3 ===
+Link: https://www.youtube.com/shorts/ujdzVPO97bU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [73] Half Trend + Ek Aur Indicator = 67.4% Return In 1Year | Kya Yeh Sach Hai? | Real Algo Backtest ===
+Link: https://www.youtube.com/shorts/WRczqfxjR4g
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [74] 21 Saal Mein $1mn Kamaya — Kya "The Trading Geek" ki Supply & Demand Zone Strategy Kaam Karti Hai? ===
+Link: https://www.youtube.com/shorts/h8UYNJ9EjOA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [75] 2 Million Subscribers Wale Subasish Pani Ki Bollinger Band Strategy Ka 1 Saal Ka Real Algo Backtest ===
+Link: https://www.youtube.com/shorts/QZMvJrxS_HQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [76] Kya Sach Mein Gold Pe 1:8 RR Milta Hai— The Trading School Ki Secret MBP Setup Ka Real Algo Backtest ===
+Link: https://www.youtube.com/shorts/9Jxhj7mVb1w
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [77] TradingView Ki Sabse Popular Indicator Company — LuxAlgo Ki Best Strategy Ka 1 Year Algo Backtest ===
+Link: https://www.youtube.com/shorts/x-7CInJes_s
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [78] Singapore Popular Trader "Rayner Teo" claims 88.89% Win Rate of Swing Strategy - Lets Backtest It ===
+Link: https://www.youtube.com/shorts/xLTliEACIQc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [79] Best Crypto Strategy For Beginners? — EMA 50/200 +    RSI Pullback Ka 1 Saal Ka Real Data Backtest ===
+Link: https://www.youtube.com/shorts/vGHK12UgsmE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [80] KPMG-PwC Chhodke Trader Bane—Kya Pawan Sharma ki day   Strategy Sach Mein Profitable Hai? Backtest ===
+Link: https://www.youtube.com/shorts/KxWakXPpWA8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [81] CA se Trader 😳 | Yogesh Nanda ki Swing Strategy ka Sach (Fully Algo Backtested) ===
+Link: https://www.youtube.com/shorts/9L2HJJNaQrc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [82] Maine Gold Ki Iss Strategy Ko Algo Se Backtest Kiya — Koi Indicator Nahi, Fir Bhi 56.8% Return Aaya ===
+Link: https://www.youtube.com/shorts/7XtF2FH92MM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [83] American Trading Legend Ka Claim Maine Check Kiya— Bull 180 Trading Strategy | Algo Backtest Results ===
+Link: https://www.youtube.com/shorts/Lzzi6ylRObY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [84] "Final Boss of All EMA Strategies" Ka 1 Saal Ka   Real Backtest — Results Ne Chauka Diya ===
+Link: https://www.youtube.com/shorts/2NZW106gUfU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [85] SMC Liquidity Sweep Strategy Backtested Using Algo — Kya Yeh Retail Traders Ke Liye Kaam Karti Hai? ===
+Link: https://www.youtube.com/shorts/CrF28vmhTKk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [86] Millionaire Trader ki GOLD Strategy ka Sach 🔥 (Algo Backtest Results Shocking!) ===
+Link: https://www.youtube.com/shorts/PLyWH7SNZIA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [87] Viral EMA Strategy ka sach 😳 (Algo Backtesting) ===
+Link: https://www.youtube.com/shorts/FvHJKuGaoqg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [88] 300% Profit Waali Chandelier Exit Indicator Strategy ka Sach 😳 | 1 Year Backtest Shocked Me! ===
+Link: https://www.youtube.com/shorts/-0oWb3Uv9FM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [89] Side Income Strategy? RSI Divergence Bread Butter Strategy of Priyank Sharma Backtested for 1 Year ===
+Link: https://www.youtube.com/shorts/e41jBFYVhLA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [90] Smart Money Concept FVG Strategy Backtested | Real Results (Algo Backtest) 📊 ===
+Link: https://www.youtube.com/shorts/0O2w9OYLuTs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [91] I Backtested Traders Paradise Redbox Strategy for 1 Year (43% Return 😳) ===
+Link: https://www.youtube.com/shorts/KJmLvxyzXSg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [92] I Backtested a Pure Price Action Strategy for 1 Year (69% Return 😳) ===
+Link: https://www.youtube.com/shorts/VhNXhA6cmDE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [93] I Backtested Mamba FX Scalping Strategy for 1 Year (62% Return 😳) ===
+Link: https://www.youtube.com/shorts/TSRKVlz4tjo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [94] Asia Forex Mentor Strategy Tested for 1 Year | 47% Return Reality Check 📊 ===
+Link: https://www.youtube.com/shorts/wVSM7VuZbT8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [95] UT Bot Alert indicator intraday strategy backtested for 1 year and results are great. ===
+Link: https://www.youtube.com/shorts/SggjoXJiNXw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [96] This MACD intraday trading strategy has a win rate of 86% | Backtested 1 Year ===
+Link: https://www.youtube.com/shorts/dF5QT__drfs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [97] Rayner Teo Inside bar trading strategy backtested 1year which claims momentum capture with low risk ===
+Link: https://www.youtube.com/shorts/r-0XAsrQR-I
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [98] This intraday trading strategy claims that you can earn 10000 rupees daily | Backtested ===
+Link: https://www.youtube.com/shorts/aXn3Z49S250
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [99] Vishal Malkan Multi-timeframe RSI swing strategy backtested (1 Year) ===
+Link: https://www.youtube.com/shorts/HY5PI8lDNqo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [100] Fastest profitable scalping strategy where you can enter after first 5 minutes backtested 1 year. ===
+Link: https://www.youtube.com/shorts/Ya3GZhijTU4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [101] More than 90% accuracy/win rate of 44FR intraday strategy | Backtested for 1 year ===
+Link: https://www.youtube.com/shorts/EXe297MXPfQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [102] 130% returns in 100 trades by this intraday strategy | Backtested 1 year ===
+Link: https://www.youtube.com/shorts/WFMCsknKHD4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [103] Alex Gonzalez earns MILLION dollars from this set and forget swing trading strategy | Backtest 1 yr ===
+Link: https://www.youtube.com/shorts/0Nb2kBy5Psc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [104] 68% returns of this stochastic intraday trading strategy on 1 year backtest | Sahil Sawhney ===
+Link: https://www.youtube.com/shorts/_cMfadzVxpo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [105] Most watched swing trading strategy of Siddharth Bhanushali | Backtest by Sahil Sawhney ===
+Link: https://www.youtube.com/shorts/EIF1PHduEbo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [106] 95% से ज्यादा accuracy/win rate of this Gold Scalping strategy | Backtest by Sahil Sawhney ===
+Link: https://www.youtube.com/shorts/hR4MSl8tJMU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [107] सबसे छोटे Stoploss aur सबसे बड़े target waali Intraday Trading Strategy | Sahil Sawhney ===
+Link: https://www.youtube.com/shorts/9soHiKD3P1s
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [108] Booming bulls -ve RRR trading strategy claim of 88% win rate backtested for 1 year | Sahil Sawhney ===
+Link: https://www.youtube.com/shorts/dRMTlF79sfc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [109] Sanjay Kathuria intraday trading strategy backtested for 1 year using algo and results are shocking ===
+Link: https://www.youtube.com/shorts/q2MGFKxZvoc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [110] 30 Lakhs made from this Simple Trading Strategy | Claim backtested for 1 Year ===
+Link: https://www.youtube.com/shorts/9jaNLcwWLF8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [111] Pushkar Raj Thakur Triple Straddle options selling strategy claims 50% ROI in 3 months | Backtested ===
+Link: https://www.youtube.com/shorts/1YKN8bHpX6M
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [112] Tori trades made 25 lakh+ with this trendline trading strategy | Trendline strategy backtested 1Year ===
+Link: https://www.youtube.com/shorts/0n4sMsqTZdw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [113] Subasish Pani 5 EMA trading strategy exposed | 60-70% accuracy claim of scalping reversal strategy ===
+Link: https://www.youtube.com/shorts/ttSbBzKmXyc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [114] This Smart Money Concept based Fair Value Gap crypto trading strategy gives most profitable trades ===
+Link: https://www.youtube.com/shorts/Erxc3a1c3jk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [115] Devansh Rai bought 3 crore Land Rover Defender using this crypto trading strategy l 200 EMA strategy ===
+Link: https://www.youtube.com/shorts/q33ZvdlJ9JY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [116] Umar Punjabi Secret Fibonacci Retracement trading strategy | Golden zone strategy 1 year backtest ===
+Link: https://www.youtube.com/shorts/4QNy389KTMM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [117] The Trade Room made 47 lakhs with this crypto trading strategy | Crypto Scalping EMA 9 & 15 Strategy ===
+Link: https://www.youtube.com/shorts/VCXbX0tMzto
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [118] Crypto trading strategy to buy 3 crore luxury car | 78.40% Annual Return ===
+Link: https://www.youtube.com/shorts/Vu4XBBji3w8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [119] Gold Trading Strategy in Hindi | 63.8% Return Backtest #Shorts ===
+Link: https://www.youtube.com/shorts/zBvUf9v4EtU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [120] Intraday EMA Breakout Strategy Backtest — 44.80% Return in 1 Year! #Shorts ===
+Link: https://www.youtube.com/shorts/0pbzM_4QkOs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [121] Tanisha Garg’s Pivot+RSI Strategy — 74% Return in 1-Year Backtest? 📈😳 ===
+Link: https://www.youtube.com/shorts/Vm3nN5biOjI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [122] Valentine = Trading ===
+Link: https://www.youtube.com/shorts/5pQj0s_BBV4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [123] This Options Scalping Strategy — Backtest Results SURPRISED Me 😳 ===
+Link: https://www.youtube.com/shorts/E-vW7vzWlpY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [124] Kunal Saraogi’s Option Buying Strategy — Backtest Reality 😳 ===
+Link: https://www.youtube.com/shorts/Hmhj_vkn3kE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [125] Job Wale Traders, This 9:30 AM Strategy Is for You 😳📊 ===
+Link: https://www.youtube.com/shorts/X0xGqUY-MPs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [126] Alphawave trading Strategy — 58% Return with 2.3% Drawdown? | 1-Year Backtest | Sahil Sawhney ===
+Link: https://www.youtube.com/shorts/NPUO77XRGmQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [127] He Lost His Entire Portfolio… This ONE Step Was Ignored 😔📉 ===
+Link: https://www.youtube.com/shorts/MSh-sllMu64
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [128] This Viral ‘Traffic Light’ Strategy Gave 267% in Backtest 😳📊 ===
+Link: https://www.youtube.com/shorts/_e9_VfItAFE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [129] IITian Trader’s 3E+ Room Strategy — Backtest Reality 📊😳 ===
+Link: https://www.youtube.com/shorts/HpCIsFXo608
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [130] Wizard Trader’s 8–30 EMA Strategy — Backtest Results 📊😳 ===
+Link: https://www.youtube.com/shorts/CN9iNxSyLVQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [131] Stock Burner’s viral 9 EMA Options Scalping Strategy — Backtest Reality 📊😳 ===
+Link: https://www.youtube.com/shorts/HmEt7L4v5tM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [132] This ‘99% Traders Beating’ Strategy — Backtest Reality 😳 ===
+Link: https://www.youtube.com/shorts/pQdzFEvca9E
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [133] ICT Silver Bullet Strategy — 1-Year Backtest Results 📊😳 ===
+Link: https://www.youtube.com/shorts/nK0lmQEgrFw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [134] Vivek Bajaj’s Multi-Timeframe Strategy — 1-Year Backtest 📊 ===
+Link: https://www.youtube.com/shorts/YjI558NGpG4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [135] Mukul Agrawal’s VWAP + MACD Strategy — Backtest Reality 📊😳 ===
+Link: https://www.youtube.com/shorts/wq8FbNiD8fs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [136] Pushkar Raj Thakur’s Brahmastra Strategy — Backtest Reality 😳 ===
+Link: https://www.youtube.com/shorts/aQapmhcpA60
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [137] Neeraj Joshi’s 60% Accuracy Claim — Backtest Reality 📊😳 ===
+Link: https://www.youtube.com/shorts/DLz9LZRSkxI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [138] CA Rachna Ranade’s Swing Strategy — 1-Year Backtest Results 📊 ===
+Link: https://www.youtube.com/shorts/3cQ62foQZFs
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [139] Anish Singh Thakur’s ‘Dassu’ Strategy — 1-Year Backtest Results 📉😳 ===
+Link: https://www.youtube.com/shorts/2qE3-4i0QoU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [140] Anant Ladha’s 85% WIN RATE Claim — Backtest Reality 😳 ===
+Link: https://www.youtube.com/shorts/TsIYbWb36Nk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [141] Abhishek Kar’s SIMPLE Strategy — Backtest Results SHOCKED Me 😳 ===
+Link: https://www.youtube.com/shorts/lTx5BhDUdC4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [142] I Backtested CA Rachana Ranade’s Trading Strategy (Results Surprised Me) ===
+Link: https://www.youtube.com/shorts/Aas3zNTaFBk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [143] 84% Return? Backtest of Kunal Saraogi Option Buying Strategy ===
+Link: https://www.youtube.com/shorts/55aRw64Lqs4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [144] I Backtested a Viral Trading Strategy (1 Year Results) ===
+Link: https://www.youtube.com/shorts/zHOPi92f44k
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [145] 63% Return? Backtest of Anish Singh Thakur (Booming Bulls) Intraday Strategy ===
+Link: https://www.youtube.com/shorts/pFs09yBjQU4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [146] 85% win-rate? Backtest of Anant Ladha’s 200EMA + RSI (1-Year) trading strategy ===
+Link: https://www.youtube.com/shorts/wefOmMG6hF8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [147] Super trader lakshya options scalping strategy backtested  #algotrading #trading #stockmarket ===
+Link: https://www.youtube.com/shorts/h2blPPedC1Y
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [148] Vivek Bajaj Mother Daughter traing strategy backtested using algo #algotrading #stockmarket #trading ===
+Link: https://www.youtube.com/shorts/le9WqL2cCnU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [149] Backtest of Wizard Trader 8-30 EMA intraday trading strategy. ===
+Link: https://www.youtube.com/shorts/IEN0dLr2HIM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [150] Backtest of The Trade Room 9-15 EMA scalping trading strategy. ===
+Link: https://www.youtube.com/shorts/lCb3_sqs7Wo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [151] Backtest of Pushkar Raj Singh Thakur Brahmastra trading strategy. ===
+Link: https://www.youtube.com/shorts/lmkyOv8vOyE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [152] Backtest of Neeraj Joshi Heikin Ashi trading strategy. ===
+Link: https://www.youtube.com/shorts/UyDCSGoVmVk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [153] Backtest of Abhishek kar simplest intraday strategy. ===
+Link: https://www.youtube.com/shorts/op1d1FKIk0I
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [154] IPO Allotment = Tinder Ghosting? 😭💔 ===
+Link: https://www.youtube.com/shorts/gOqDfnF5S80
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [155] Warren Buffett Ka Buffet? Paisa Banane Ki Thali! 💸🍽️ ===
+Link: https://www.youtube.com/shorts/Umt9Q4r8pAM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [156] 11 Mahine k Rent Agreement Ka RAAZ + Rent Agreement Ki Checklist! | Must Watch! ===
+Link: https://www.youtube.com/shorts/zscaYt3i3fU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [157] Crypto Se Lakhpati Ban Na Hai? 2025 Mein Kaise Sahi Investments Karein? 💸 ===
+Link: https://www.youtube.com/shorts/TP44jyXcUpo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [158] First Salary ka Reality Check = TDS 😭 #TaxAttack ===
+Link: https://www.youtube.com/shorts/-jC-6p8-mOA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [159] Beta ban gaya bakra… ULIP ke chakkar mein 😤 ===
+Link: https://www.youtube.com/shorts/ot3HUCVwK9Q
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [160] SIP is better than Situationship 💸❤ | Usne Dil Toda, SIP Ne Wealth Joda! 😎📈 ===
+Link: https://www.youtube.com/shorts/87KxuKgnlEo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [161] This Budget Deserves an Oscar for Tragedy 🎭| Budgeting gone wrong😂🔥❌ ===
+Link: https://www.youtube.com/shorts/3wVQ733aCqQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [162] Bhai Ne Trade Kiya, Market Ne TED Talk De Diya 😭😂 ===
+Link: https://www.youtube.com/shorts/Ajp-AtDv3SM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [163] 50k tax bacha, 5 crore banega – NPS le liya bhai 🔥| NPS = Not Playing Stupid 😎🔥 ===
+Link: https://www.youtube.com/shorts/zV7hUjEHtFM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [164] iPhone on Credit Card EMI = Monthly Regret Subscription 📉 ===
+Link: https://www.youtube.com/shorts/sp9Ks693gEM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [165] Mummy Ne Bola Tha FD Karne Ko 😩 RIP Returns! ===
+Link: https://www.youtube.com/shorts/cEXUFCDANuA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [166] Mutual Fund Sahi Hai? Reality Check for Broke Bros 😤 ===
+Link: https://www.youtube.com/shorts/eP2mj8ZQYJQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [167] Salary Toh Aayi Par Gayi Kahan 😭💸 ===
+Link: https://www.youtube.com/shorts/CtOnh8Tl1Zo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [168] Kaise Bhare ITR? Income Tax Guide 2025 | 2025 Ke Latest Tax Slabs, Rate and Rebate | Must Watch ===
+Link: https://www.youtube.com/shorts/T1IBNyvP_RQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [169] Start National Pension Scheme(NPS) at 30 – Get ₹1.5 Cr Corpus, ₹88L Tax Free & ₹34,500/Month Pension ===
+Link: https://www.youtube.com/shorts/h_gsjQdlgcA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [170] Home Loan Tips 2025: What First-Time Buyers Need to Know ===
+Link: https://www.youtube.com/shorts/4Up5vxUorXc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [171] ₹1 Lakh Savings Challenge – Mid-Year Review to Final Target 🎯(Part 2 Highlights) ===
+Link: https://www.youtube.com/shorts/Y0LePl5n8lc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [172] Salary Kam Hai? Fir Bhi ₹1 Lakh  Ek Saal Mein Jod Sakte Ho! ===
+Link: https://www.youtube.com/shorts/W5mJam1lK7M
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [173] Apple’s Big India Move 😲 | Major Financial Highlights 2025 #finance #news #india ===
+Link: https://www.youtube.com/shorts/2x1T9r0zLtk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [174] 🤯 Yes Bank Share Price Update: Japanese Bank Sumitomo Mitsui Banega New Boss? Full Story Inside! ===
+Link: https://www.youtube.com/shorts/kbLEtJdo8Wk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [175] Why Middle Class Is Getting Poor — Here’s the Fix 💡 ===
+Link: https://www.youtube.com/shorts/4KNTAMfMsx0
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [176] Why Middle Class Is Getting Poor — Tag Se Pet Nahi Bharta! ===
+Link: https://www.youtube.com/shorts/o0o5wrKbgIQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [177] Why Middle Class Is Getting Poor — Is There a Way Out? ===
+Link: https://www.youtube.com/shorts/QlDUKyqcZ_8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [178] Aaj Ki Badi Khabar | Finance News Today in Hindi 🧨 ===
+Link: https://www.youtube.com/shorts/QyFeuqCQRmM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [179] Aaj Ki Badi Khabar | Finance News Today in Hindi 🧨 ===
+Link: https://www.youtube.com/shorts/gFzgdSBDzc8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [180] Aaj Ki Badi Khabar | Finance News Today in Hindi 🧨 ===
+Link: https://www.youtube.com/shorts/1KVKcfjHKcI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [181] Aaj Ki Badi Khabar | Finance News Today in Hindi 🧨 ===
+Link: https://www.youtube.com/shorts/cSWLP6hwAbo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [182] IDFC First Bank Q4 Results Analysis: NIM & Profit Down | Dividend Announced ===
+Link: https://www.youtube.com/shorts/x0zd_9zDWmw
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [183] "Fit Hoon, Bima Kyun?" Dr. Neetu Singh Explains! | Why Medical Insurance Is Important for Gen-Z! ===
+Link: https://www.youtube.com/shorts/fDtHwVl-EOE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [184] Shocking Stats! Why Medical Insurance is Important | Medical Costs Exploding! ===
+Link: https://www.youtube.com/shorts/XyHbiUaZMRc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [185] Why Medical Insurance Is Important | Must-Know Facts! Don’t Regret Later! ===
+Link: https://www.youtube.com/shorts/RLhvaM6atu8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [186] Why HUL Stock Is Falling Despite Dividend News? 😱 Big Shock! ===
+Link: https://www.youtube.com/shorts/-MlYk4Q--3E
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [187] Gold Hits ₹1 Lakh! News About Gold Price in India Today | Buy or Run?😱 ===
+Link: https://www.youtube.com/shorts/pw-eij9oIbY
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [188] GST on UPI Transactions Above ₹2,000 | Is This the End of Free UPI? ===
+Link: https://www.youtube.com/shorts/s9F6kpRiicE
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [189] Gensol Engineering Share Latest News | Gensol Share Crashes 91% | Latest SEBI Action ===
+Link: https://www.youtube.com/shorts/wQ-aFZFUQ_Q
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [190] Gensol Engineering Share Latest News | Gensol Engineering & BluSmart Link Exposed! 🔥 ===
+Link: https://www.youtube.com/shorts/GnYs8dOgeM4
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [191] Gensol Engineering Share Latest News | SEBI Exposes Scam! 😱 ===
+Link: https://www.youtube.com/shorts/MWz8bMCoXA0
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [192] Is Your Sector Safe? Full Impact of Tariffs by USA on Indian Market! ===
+Link: https://www.youtube.com/shorts/oQ1v9fUMhqc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [193] Google Tax Gone? USA Tariffs Shake Indian Stocks & Sectors! ⚠️ ===
+Link: https://www.youtube.com/shorts/oH7lAuuZoBg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [194] Impact of Tariffs by USA on Share Market & Sectors Explained! 🔍 ===
+Link: https://www.youtube.com/shorts/-ylPZVdFxQA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [195] FMCG Slowdown Again? India FMCG Sector Analysis | Time to Buy or Sell? ===
+Link: https://www.youtube.com/shorts/Jq2h1KqcaeI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [196] India FMCG Sector Analysis | Growth Toh Fake Thi | Shocking Kantar Report! ===
+Link: https://www.youtube.com/shorts/zwjI4FYqNlg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [197] India FMCG Sector Analysis | Massive 838% Growth! 😲 ===
+Link: https://www.youtube.com/shorts/y7Qc84r_3AU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [198] Your SIM = Their Jackpot? Latest Cyber Frauds in India | How ₹7.6 Cr Almost Vanished! ===
+Link: https://www.youtube.com/shorts/aBlJ2vTQ2qQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [199] Lost Lakhs in Seconds! Latest Cyber Frauds in India ===
+Link: https://www.youtube.com/shorts/Tj8281zux44
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [200] Latest Cyber Frauds in India | ₹6606 Cr Scam Exposed! 😱 ===
+Link: https://www.youtube.com/shorts/bBawVAM3_xo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [201] Shocking Truth: Why Everyone’s Switching to Credit Cards in 2025! 🔁 ===
+Link: https://www.youtube.com/shorts/yUMvHM_xrFI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [202] Why Credit Cards Are Becoming India’s Top Choice in India 💥💳🔥 ===
+Link: https://www.youtube.com/shorts/69ANQWCuXTc
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [203] IndusInd Bank Share News Today in Hindi | Multibagger Ya Trap? ===
+Link: https://www.youtube.com/shorts/pvq21ilaj8g
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [204] IndusInd Bank Share News Today in Hindi | Big Crash! 😱 | Techinal Analysis ===
+Link: https://www.youtube.com/shorts/ZNZOXJtpgxk
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [205] IndusInd Bank Share News Today in Hindi | Big Crash! | | Yes Bank Part 2? ===
+Link: https://www.youtube.com/shorts/bjYT4ix7OEo
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [206] Fake Loan App Scams: Is Your Phone Being Tracked? Google & ED Take Action!⚠️ ===
+Link: https://www.youtube.com/shorts/HpStACfkFCg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [207] 1000+ Fake Loan App Scams Targeting Indians! RBI’s Big Warning⚠️ ===
+Link: https://www.youtube.com/shorts/MprUkoTUCyQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [208] Shocking Rise in Food Inflation 2025: Kya RBI Control Kar Payegi? 😨 ===
+Link: https://www.youtube.com/shorts/wXR49St_psI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [209] Food Inflation 2025: Is Your Kitchen Budget in Danger? ===
+Link: https://www.youtube.com/shorts/Pz9cHqIGqJI
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [210] Biggest Share Market Crash in 2025? Don’t Ignore This! ===
+Link: https://www.youtube.com/shorts/2JQDFMIZlio
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [211] Biggest Share Market Crash in 2025: Smallcaps Down 23% & Midcaps Destroyed! ===
+Link: https://www.youtube.com/shorts/5pGCTAh_3yU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [212] Biggest Share Market Crash in 2025? Bear Phase Ahead?🚨 ===
+Link: https://www.youtube.com/shorts/GX1x9daJsOU
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [213] Pi Network Crypto News | Zero Investment, Big Gains? 💸 ===
+Link: https://www.youtube.com/shorts/wNE8OVvorIg
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [214] Shocking Pi Network Crypto News You Must Know!😱Reality vs Hype?🔍 ===
+Link: https://www.youtube.com/shorts/iQZoyLZXRq8
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [215] Pi Network Crypto News: Next Bitcoin or Big Scam? Don’t Miss This!⚠️ ===
+Link: https://www.youtube.com/shorts/YW11fkiwgcA
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [216] 5 Deaths NOT Covered in Life Insurance Policy for Family | Hidden Clauses ===
+Link: https://www.youtube.com/shorts/tqR0RlQokuQ
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [217] Life Insurance Policy for Family | 3 reasons why claim Rejected?😱 ===
+Link: https://www.youtube.com/shorts/0U-NWj8JPLM
+
+[No transcript available]
+
+------------------------------------------------------------
+
+=== [218] Trade War Between USA and India Shocks Markets! 📉Is India at Risk? ===
+Link: https://www.youtube.com/shorts/D1N7tYwyR5M
+
+[No transcript available]
+
+------------------------------------------------------------
+

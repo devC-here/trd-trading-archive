@@ -1,0 +1,1050 @@
+EURUSD 15M SIMULATED DATA — 600 FILE REFERENCE GUIDE
+======================================================================
+Purpose  : Ensemble model output mapping & regime classification
+Timeframe: 15-Minute OHLCV, 300 candles per file, 6 files per condition
+Models   : Momentum | VWAP | Breakout | Candle | Microstructure
+Trigger  : All signals designed to fire in LAST 50 candles
+======================================================================
+
+HOW TO READ THIS FILE:
+  STRUCTURE  = What happens across all 300 candles
+  LAST 50    = What your model reads at inference time
+  SIGNAL     = Expected output label from signal heads
+  MODELS HIT = Which models should fire strongest signal
+  NOTES      = Key differentiators vs similar conditions
+
+======================================================================
+  GROUP 1: TREND — EARLY STAGE (20 conditions × 6 files = 120 files)
+======================================================================
+
+  --- BULL EARLY TREND CONDITIONS ---
+
+  FILE GROUP : trend_bull_early_ignition_001.csv  →  trend_bull_early_ignition_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Flat/choppy base for 220 bars, then strong bullish ignition candles from bar 240
+  LAST 50    : Strong bull candles (large bodies, minimal wicks), rising volume, accelerating
+  SIGNAL     : momentum=go | candle=act | micro=act
+  MODELS HIT : Momentum (ema_slope_norm HIGH), Candle (seq_accel, fractal_bull), Micro (bar_energy)
+  NOTES      : No prior trend — ignition from nothing. ADX just starting to build. EMA slope fresh.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_post_reversal_001.csv  →  trend_bull_post_reversal_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Prior downtrend for 180 bars → reversal pivot → early bull trend building in last 50
+  LAST 50    : Bullish candles taking over, close_gravity rising, body_ratio increasing
+  SIGNAL     : momentum=go | candle=act | micro=act
+  MODELS HIT : Momentum (di_balance flipping positive), Candle (handoff + seq_accel), Micro (cum_delta_5z)
+  NOTES      : Total pip move may be net negative (prior downtrend). Focus = last 50 only.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_vwap_reclaim_001.csv  →  trend_bull_vwap_reclaim_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Price drifts below/near VWAP for 200 bars, then surges above with volume at bar 230
+  LAST 50    : Price above VWAP, above_vwap_streak rising, vwap_slope_z positive
+  SIGNAL     : vwap=act | momentum=go | candle=act
+  MODELS HIT : VWAP (vwap_reclaim_qual HIGH, above_vwap_streak building), Momentum (structure_bias=bullish)
+  NOTES      : Key feature: vwap_reclaim_qual spike at reclaim candle, then streak builds.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_structure_shift_001.csv  →  trend_bull_structure_shift_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Ranging lower-highs pattern for 200 bars → CHoCH break above last swing high at bar 230
+  LAST 50    : Break above prior resistance, large bull candle, volume surge, HH confirmed
+  SIGNAL     : momentum=go | breakout=now | candle=act
+  MODELS HIT : Breakout (don_breakout, break_strength), Momentum (break_strength, don_position>0.8)
+  NOTES      : Structure shift = Change of Character. First Higher High. ADX begins rising.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_micro_accumulation_001.csv  →  trend_bull_micro_accumulation_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Sideways with increasing lower-wick rejections (absorption) for 180 bars → breakout
+  LAST 50    : Lower wicks frequent in mid-section, then clean bull candles in last 50
+  SIGNAL     : micro=act | candle=act | breakout=now
+  MODELS HIT : Micro (rejection_qual positive/lower, absorption_fp building), Candle (pin_bull_qual)
+  NOTES      : Volume rising during accumulation zone. Body small but lower wicks = buyers absorbing.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_slow_build_001.csv  →  trend_bull_slow_build_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Linear ramp: bias and volume increase proportionally across all 300 bars
+  LAST 50    : Last 50 = highest bias and volume of the entire series, consistent bull candles
+  SIGNAL     : momentum=go | candle=act | vwap=act
+  MODELS HIT : Momentum (ema_slope_norm, efficiency_ratio rising gradually), VWAP (above streak)
+  NOTES      : No pullbacks. Efficiency Ratio HIGH (clean directional move vs noise).
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_compression_release_001.csv  →  trend_bull_compression_release_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Normal trend for 80 bars → extreme ATR compression (bars 120-240) → explosive release
+  LAST 50    : ATR surges 5x, large bull bodies, high volume, price shoots up
+  SIGNAL     : breakout=now | momentum=go | micro=act
+  MODELS HIT : Breakout (exp_velocity, bb_width_z, vol_potential_e), Micro (bar_energy spike)
+  NOTES      : Deepest squeeze in dataset. atr_ratio_z and exp_velocity will be extreme.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_initial_breakout_001.csv  →  trend_bull_initial_breakout_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range for 240 bars → single massive breakout candle (bar 255) → confirmation candles
+  LAST 50    : One or two very large body candles, then follow-through bull trend
+  SIGNAL     : breakout=now | momentum=go | candle=act
+  MODELS HIT : Breakout (bkout_confirm spike, band_walk_bull, don_breakout), Candle (engulf_qual HIGH)
+  NOTES      : Breakout candle volume 6000+. bkout_confirm will be highest in dataset.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_base_break_001.csv  →  trend_bull_base_break_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Multi-test horizontal base for 200 bars (multiple touches) → clean break above
+  LAST 50    : Break candle + follow-through bull trend, don_bias strongly positive
+  SIGNAL     : breakout=now | momentum=go | candle=act
+  MODELS HIT : Breakout (don_bias, bkout_confirm), Momentum (don_position→1.0, break_strength)
+  NOTES      : Base = support level tested multiple times. Break = significant. Volume surge on break.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bull_hidden_accumulation_001.csv  →  trend_bull_hidden_accumulation_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Appears flat or slightly bearish for 200 bars with rising volume → sudden reveal up
+  LAST 50    : Last 50: clean bull candles, large bodies, volume already elevated from accumulation
+  SIGNAL     : micro=act | candle=act | momentum=go
+  MODELS HIT : Micro (absorption_fp during accumulation, bar_energy reveal), VWAP (above streak)
+  NOTES      : Model needs to detect rising volume on flat price = hidden buying. vol_z100 rising.
+  ------------------------------------------------------------------
+
+  --- BEAR EARLY TREND CONDITIONS (mirror of bull — all signals flipped) ---
+
+  FILE GROUP : trend_bear_early_ignition_001.csv  →  trend_bear_early_ignition_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Flat base for 220 bars → strong bearish ignition in last 60
+  LAST 50    : Bear candles: close near low (close_gravity LOW), rising volume, accelerating down
+  SIGNAL     : momentum=avoid/go-bear | candle=act-bear | micro=act-bear
+  MODELS HIT : Momentum (di_balance negative), Candle (seq_dir_ratio LOW), Micro (cum_delta_5z negative)
+  NOTES      : Mirror of bull_early_ignition. All bull signals flipped.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_post_reversal_001.csv  →  trend_bear_post_reversal_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Prior uptrend for 180 bars → reversal → early bear trend in last 50
+  LAST 50    : Bearish candles, close_gravity LOW, body_ratio rising on bear side
+  SIGNAL     : momentum=avoid | candle=act-bear | micro=act-bear
+  MODELS HIT : Momentum (structure_bias=bearish), Candle (fractal_bear), Micro (rejection_qual negative)
+  NOTES      : Total pip move may be net positive (prior uptrend). Signal in last 50 only.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_vwap_rejection_001.csv  →  trend_bear_vwap_rejection_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Price near/above VWAP for 200 bars → rejected, drops decisively below VWAP
+  LAST 50    : Price below VWAP, above_vwap_streak=0, vwap_rejection_qual HIGH
+  SIGNAL     : vwap=act-bear | momentum=avoid | candle=act-bear
+  MODELS HIT : VWAP (vwap_rejection_qual spike, above_vwap_streak=0), Momentum (di_balance negative)
+  NOTES      : Opposite of vwap_reclaim. vwap_dev_atr strongly negative in last 50.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_structure_shift_001.csv  →  trend_bear_structure_shift_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Ranging higher-lows pattern → CHoCH break below last swing low at bar 230
+  LAST 50    : Break below prior support, large bear candle, volume surge
+  SIGNAL     : momentum=avoid | breakout=now-bear | candle=act-bear
+  MODELS HIT : Breakout (band_walk_bear, don_bias negative), Momentum (break_strength negative)
+  NOTES      : First Lower Low confirmed. ADX rising. di_balance strongly negative.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_micro_distribution_001.csv  →  trend_bear_micro_distribution_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Sideways with upper-wick rejections (distribution) for 180 bars → breakdown
+  LAST 50    : Upper wicks in mid-section, then clean bear candles in last 50
+  SIGNAL     : micro=act-bear | candle=act-bear | breakout=now-bear
+  MODELS HIT : Micro (rejection_qual negative/upper), Candle (pin_bear_qual HIGH)
+  NOTES      : Opposite of micro_accumulation. Upper wicks = sellers distributing.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_slow_build_001.csv  →  trend_bear_slow_build_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Linear ramp down: bias and volume increase proportionally across 300 bars
+  LAST 50    : Last 50 = strongest bear bias, consistent bear candles, rising volume
+  SIGNAL     : momentum=avoid | candle=act-bear | vwap=act-bear
+  MODELS HIT : Momentum (ema_slope_norm negative, efficiency_ratio high), VWAP (above_streak=0)
+  NOTES      : Efficiency Ratio HIGH (clean directional move). No pullbacks.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_compression_release_001.csv  →  trend_bear_compression_release_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Slight bear drift → extreme ATR compression → explosive downward release
+  LAST 50    : ATR surges, large bear bodies, high volume, price drops sharply
+  SIGNAL     : breakout=now-bear | momentum=avoid | micro=act-bear
+  MODELS HIT : Breakout (exp_velocity, band_walk_bear), Micro (bar_energy spike negative)
+  NOTES      : Mirror of compression_release. exp_velocity extreme but direction = bear.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_initial_breakout_001.csv  →  trend_bear_initial_breakout_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range for 240 bars → massive bear breakdown candle → follow-through
+  LAST 50    : Single large bear candle, then continuation selling
+  SIGNAL     : breakout=now-bear | momentum=avoid | candle=act-bear
+  MODELS HIT : Breakout (bkout_confirm negative, band_walk_bear), Candle (engulf_qual negative)
+  NOTES      : High volume bear breakdown candle. bkout_confirm = -3 (maximum bear signal).
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_base_break_001.csv  →  trend_bear_base_break_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Multi-test support level → clean break below, follow-through bear
+  LAST 50    : Break candle + continuation, don_bias strongly negative
+  SIGNAL     : breakout=now-bear | momentum=avoid | candle=act-bear
+  MODELS HIT : Breakout (don_bias<0, band_walk_bear), Momentum (don_position→0, break_strength<0)
+  NOTES      : Support turned resistance after break. Volume surge on breakdown.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trend_bear_hidden_distribution_001.csv  →  trend_bear_hidden_distribution_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Appears flat with rising volume → sudden reveal downward
+  LAST 50    : Last 50: clean bear candles, volume already elevated
+  SIGNAL     : micro=act-bear | candle=act-bear | momentum=avoid
+  MODELS HIT : Micro (absorption_fp during distribution), VWAP (above_streak=0)
+  NOTES      : Opposite of hidden_accumulation. Smart money selling into flat price.
+  ------------------------------------------------------------------
+
+======================================================================
+  GROUP 2: BREAKOUT CONDITIONS (20 conditions × 6 files = 120 files)
+======================================================================
+
+  --- BULL BREAKOUT CONDITIONS ---
+
+  FILE GROUP : breakout_bull_squeeze_strong_001.csv  →  breakout_bull_squeeze_strong_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Normal trend for 100 bars → DEEP squeeze (BB <<< KC) for 155 bars → explosive bull break
+  LAST 50    : After squeeze: exp_velocity HIGH, bkout_confirm positive, volume surge
+  SIGNAL     : breakout=now | momentum=go | micro=act
+  MODELS HIT : Breakout (squeeze_maturity HIGH, squeeze_stack=3, exp_velocity, bkout_confirm)
+  NOTES      : Longest/deepest squeeze. squeeze_maturity will be highest in dataset. consec_squeeze=155+
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_squeeze_medium_001.csv  →  breakout_bull_squeeze_medium_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Normal context → medium-depth squeeze for 105 bars → bull breakout
+  LAST 50    : Moderate squeeze metrics, clean breakout, volume confirms
+  SIGNAL     : breakout=now | momentum=go
+  MODELS HIT : Breakout (squeeze_stack=2-3, kb_ratio<1 for 105 bars, exp_velocity)
+  NOTES      : Medium squeeze depth. Good baseline for squeeze → breakout mapping.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_squeeze_low_vol_001.csv  →  breakout_bull_squeeze_low_vol_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Low volume squeeze for 105 bars → breakout with modest volume
+  LAST 50    : vol_z20 stays LOW during squeeze and at breakout (unusual low-vol break)
+  SIGNAL     : breakout=now | momentum=go
+  MODELS HIT : Breakout (squeeze features present), VWAP (vol_trend_z LOW = silent break)
+  NOTES      : Tests model on low-vol breakouts. vol_sq_div and vol_surge_extreme LOW.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_vwap_aligned_001.csv  →  breakout_bull_vwap_aligned_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Price trends up for 150 bars (above VWAP), then squeezes, then breaks out higher
+  LAST 50    : VWAP itself rising, price reclaims post-squeeze above rising VWAP
+  SIGNAL     : breakout=now | vwap=act | momentum=go
+  MODELS HIT : VWAP (above_streak HIGH, vwap_slope_z positive, vwap_band_walk), Breakout (all)
+  NOTES      : Most complete bull signal. VWAP + squeeze + breakout all aligned.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_high_momentum_001.csv  →  breakout_bull_high_momentum_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Strong prior momentum for 80 bars → squeeze → breakout with extreme momentum
+  LAST 50    : Breakout candles massive, vol surges to 8000+, strongest momentum in dataset
+  SIGNAL     : breakout=now | momentum=go | micro=act
+  MODELS HIT : All models likely firing. ret_3_atr_norm extreme, bar_energy extreme, bkout_confirm max
+  NOTES      : Highest pip move in breakout group. Models should show maximum confidence.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_after_accumulation_001.csv  →  breakout_bull_after_accumulation_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Long slow accumulation (volume rising, price flat) for 200 bars → breakout
+  LAST 50    : Volume already HIGH before breakout. Breakout confirms hidden buying.
+  SIGNAL     : breakout=now | micro=act | momentum=go
+  MODELS HIT : Micro (absorption_fp, bar_energy), Breakout (vol_sq_div, bkout_confirm), VWAP (vol_trend)
+  NOTES      : Volume precedes price. vol_z100 already elevated when breakout fires.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_multi_tf_alignment_001.csv  →  breakout_bull_multi_tf_alignment_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Higher-TF uptrend for 80 bars → squeeze → breakout with all timeframes aligned
+  LAST 50    : Efficient breakout: momentum, VWAP, breakout, candle all pointing same direction
+  SIGNAL     : breakout=now | momentum=go | vwap=act | candle=act
+  MODELS HIT : All 5 models. slope_alignment=+1, cloud_twist=+1, don_breakout, squeeze release
+  NOTES      : Maximum multi-model alignment scenario. Use for ensemble calibration.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_band_expansion_001.csv  →  breakout_bull_band_expansion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Maximum BB contraction (ATR*0.32) for 135 bars → sudden violent BB expansion upward
+  LAST 50    : bb_width_z extremely LOW then spikes HIGH, exp_velocity maximum
+  SIGNAL     : breakout=now | momentum=go
+  MODELS HIT : Breakout (bb_width_z, exp_velocity, kb_ratio reversal), Momentum (vol_regime_confirm)
+  NOTES      : Focus: bb_width_z goes from minimum to maximum. Biggest volatility expansion.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_range_escape_001.csv  →  breakout_bull_range_escape_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Tight 30-bar oscillating range for 250 bars → escape above with volume surge
+  LAST 50    : Clean range boundaries then decisive escape, bkout_confirm fires
+  SIGNAL     : breakout=now | momentum=go | candle=act
+  MODELS HIT : Breakout (don_breakout, bkout_confirm), Candle (lb_body_ratio HIGH at escape)
+  NOTES      : Clear range → escape. don_position goes from 0.5 to 1.0 at escape.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bull_vol_expansion_001.csv  →  breakout_bull_vol_expansion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range with volume building for 30 bars before break → volume explosion at breakout
+  LAST 50    : vol_z20 and vol_z100 spike simultaneously with price break
+  SIGNAL     : breakout=now | vwap=act | micro=act
+  MODELS HIT : VWAP (vol_surge_extreme, session_vol_factor), Micro (bar_energy), Breakout (vol_sq_div)
+  NOTES      : Volume leads the price. vol_trend_z rising into the breakout candle.
+  ------------------------------------------------------------------
+
+  --- BEAR BREAKOUT CONDITIONS (mirror — all direction signals flipped) ---
+
+  FILE GROUP : breakout_bear_squeeze_strong_001.csv  →  breakout_bear_squeeze_strong_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Deep squeeze → explosive bear breakdown
+  LAST 50    : Bear candles escape lower BB, band_walk_bear HIGH, bkout_confirm negative
+  SIGNAL     : breakout=now-bear | momentum=avoid
+  MODELS HIT : Breakout (all bear features), Momentum (di_balance<0)
+  NOTES      : Mirror of bull_squeeze_strong. sq_lean negative during squeeze.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_squeeze_medium_001.csv  →  breakout_bear_squeeze_medium_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Medium squeeze → bear breakout
+  LAST 50    : Moderate bear breakdown, vol confirms
+  SIGNAL     : breakout=now-bear | momentum=avoid
+  MODELS HIT : Breakout (sq_lean<0, kb_ratio<1, exp_velocity)
+  NOTES      : Baseline bear squeeze pattern.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_squeeze_low_vol_001.csv  →  breakout_bear_squeeze_low_vol_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Low-vol squeeze → low-vol bear break
+  LAST 50    : Silent bear breakdown, volume stays LOW
+  SIGNAL     : breakout=now-bear
+  MODELS HIT : Breakout (squeeze features), VWAP (vol LOW)
+  NOTES      : Tests model on silent/low-vol breakdowns.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_vwap_aligned_001.csv  →  breakout_bear_vwap_aligned_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Trend down → squeeze → break below rising VWAP (VWAP turns down)
+  LAST 50    : Below VWAP, vwap_dev_atr negative, vwap_rejection_qual
+  SIGNAL     : breakout=now-bear | vwap=act-bear | momentum=avoid
+  MODELS HIT : VWAP + Breakout + Momentum all bear
+  NOTES      : VWAP turns from support to resistance after squeeze break.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_high_momentum_001.csv  →  breakout_bear_high_momentum_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Prior strong bear + squeeze + extreme bear breakout
+  LAST 50    : Largest bear pip move in dataset, vol 8000+
+  SIGNAL     : breakout=now-bear | momentum=avoid | micro=act-bear
+  MODELS HIT : All models bear maximum signal
+  NOTES      : Maximum bear momentum. Models should show max bear confidence.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_after_distribution_001.csv  →  breakout_bear_after_distribution_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Long distribution (rising vol, flat/down price) → breakdown
+  LAST 50    : Volume elevated before break, bear candles accelerate
+  SIGNAL     : breakout=now-bear | micro=act-bear | momentum=avoid
+  MODELS HIT : Micro (absorption_fp bear), Breakout (vol_sq_div negative)
+  NOTES      : Bear version of after_accumulation.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_multi_tf_alignment_001.csv  →  breakout_bear_multi_tf_alignment_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Higher-TF downtrend → squeeze → bear breakout, all TFs aligned
+  LAST 50    : All models pointing bear simultaneously
+  SIGNAL     : breakout=now-bear | all models bear
+  MODELS HIT : All 5 models. slope_alignment=-1, cloud_twist=-1
+  NOTES      : Maximum bear ensemble alignment.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_band_expansion_001.csv  →  breakout_bear_band_expansion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Max BB contraction → violent downward expansion
+  LAST 50    : bb_width_z from minimum to spike, exp_velocity with bear direction
+  SIGNAL     : breakout=now-bear | momentum=avoid
+  MODELS HIT : Breakout (bb_width_z spike), Momentum (vol_regime_confirm)
+  NOTES      : Biggest bear volatility expansion.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_range_escape_001.csv  →  breakout_bear_range_escape_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Tight range → escape below with volume
+  LAST 50    : don_position goes from 0.5 to 0.0 at escape
+  SIGNAL     : breakout=now-bear | momentum=avoid | candle=act-bear
+  MODELS HIT : Breakout (don_breakout negative, bkout_confirm<0)
+  NOTES      : Clear range → bear escape.
+  ------------------------------------------------------------------
+
+  FILE GROUP : breakout_bear_vol_expansion_001.csv  →  breakout_bear_vol_expansion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range + rising vol → bear vol explosion at breakdown
+  LAST 50    : vol_z20 and price both collapse simultaneously
+  SIGNAL     : breakout=now-bear | vwap=act-bear | micro=act-bear
+  MODELS HIT : VWAP (vol_surge_extreme bear), Micro (bar_energy bear)
+  NOTES      : Volume confirms bear breakdown.
+  ------------------------------------------------------------------
+
+======================================================================
+  GROUP 3: REVERSAL CONDITIONS (20 conditions × 6 files = 120 files)
+======================================================================
+
+  --- BULL REVERSAL CONDITIONS ---
+
+  FILE GROUP : reversal_bull_vwap_reclaim_001.csv  →  reversal_bull_vwap_reclaim_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull context for 100 bars → sharp drop BELOW VWAP at bar 160 → decisive reclaim at 230
+  LAST 50    : vwap_reclaim_qual HIGH, above_vwap_streak building, bull candles resuming
+  SIGNAL     : vwap=act | momentum=go | candle=act
+  MODELS HIT : VWAP (vwap_reclaim_qual spike, delta_at_vwap positive), Momentum (structure_bias=bullish)
+  NOTES      : Key: sharp drop then snap-back ABOVE VWAP. vol_profile_asym flips positive.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_micro_absorption_001.csv  →  reversal_bull_micro_absorption_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Downtrend → high-vol absorption zone (small bodies + lower wicks) → bull reversal
+  LAST 50    : absorption_fp HIGH during reversal zone, then clean bull candles, lower wicks persist
+  SIGNAL     : micro=act | candle=act | momentum=go
+  MODELS HIT : Micro (absorption_fp=3, rejection_qual positive, bar_energy), Candle (pin_bull_qual)
+  NOTES      : Absorption = sellers failing to push lower. close_gravity rising from absorption zone.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_exhaustion_001.csv  →  reversal_bull_exhaustion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → shrinking bear bodies → doji zone → bull takeover in last 50
+  LAST 50    : body_ratio decreasing then flipping, doji_context near 0, ha_body flipping positive
+  SIGNAL     : candle=act | momentum=go | micro=act
+  MODELS HIT : Candle (handoff=1, seq_accel positive, ha_body_slope rising), Momentum (di_balance flipping)
+  NOTES      : Textbook exhaustion. body_entropy HIGH during doji zone, then LOW again on bull takeover.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_climax_001.csv  →  reversal_bull_climax_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → CLIMAX candle (huge vol, massive bear body) at bar 250 → immediate reversal
+  LAST 50    : Single massive bear candle then bull recovery. vol spike = 12000. Climax is the reversal.
+  SIGNAL     : candle=act | micro=act | momentum=go
+  MODELS HIT : Micro (bar_energy climax candle, then reversal), Candle (engulf_qual huge), VWAP (reclaim)
+  NOTES      : Climax candle: body size 3.5x ATR, vol 12000. Model must detect vol climax then reversal.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_double_bottom_001.csv  →  reversal_bull_double_bottom_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Decline → bottom → bounce → retest bottom → hold → neckline break in last 50
+  LAST 50    : Two equal lows visible, then break above neckline with volume surge
+  SIGNAL     : momentum=go | breakout=now | candle=act
+  MODELS HIT : Momentum (trend_position rising from 0), Breakout (don_breakout), Candle (seq_accel)
+  NOTES      : Classic W pattern. Second bottom should NOT break first. Neckline break = signal.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_structure_shift_001.csv  →  reversal_bull_structure_shift_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → consolidation → first Higher High break in last 50 (CHoCH)
+  LAST 50    : CHoCH candle large, volume surge, then early bull trend
+  SIGNAL     : momentum=go | breakout=now | candle=act
+  MODELS HIT : Momentum (break_strength positive, structure_bias flipping), Breakout (don_breakout)
+  NOTES      : First HH after series of LH. ADX starts rising. di_balance flips positive.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_false_breakdown_001.csv  →  reversal_bull_false_breakdown_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range → breaks BELOW support (bear trap) → snaps back above fast → strong bull
+  LAST 50    : False breakdown candle then large bull reclaim candle, then continuation
+  SIGNAL     : breakout=now | candle=act | micro=act
+  MODELS HIT : Candle (engulf_qual, lb_close_grav HIGH), Micro (rejection_qual positive, cum_delta_5z)
+  NOTES      : False breakdown = stop hunt. Bears trapped. Bull momentum after reclaim is strong.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_spring_001.csv  →  reversal_bull_spring_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Base → spring shakeout below support (bar 248) → snap back above base (bar 255+)
+  LAST 50    : 3-bar shakeout, then sharp V-recovery. Lower wick rejection on spring candle.
+  SIGNAL     : candle=act | micro=act | breakout=now
+  MODELS HIT : Candle (pin_bull_qual on spring, fractal_bull after), Micro (rejection_qual spike)
+  NOTES      : Wyckoff spring. Shakeout volume HIGH. Recovery volume = confirms spring.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_trap_release_001.csv  →  reversal_bull_trap_release_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Base → stop hunt dip (bar 245) → explosive release upward (bar 252+)
+  LAST 50    : Stop hunt: vol surge bear. Release: larger vol surge bull immediately after.
+  SIGNAL     : candle=act | micro=act | momentum=go
+  MODELS HIT : Micro (cum_delta_5z flips from bear to bull spike), Candle (engulf_qual on release)
+  NOTES      : Trap release: bear stop hunt immediately followed by stronger bull move.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bull_accumulation_complete_001.csv  →  reversal_bull_accumulation_complete_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Decline for 60 bars → long accumulation (flat, rising vol) for 180 bars → markup begins
+  LAST 50    : Markup phase: clean bull candles, large bodies, volume high from accumulation
+  SIGNAL     : momentum=go | micro=act | vwap=act
+  MODELS HIT : Micro (bar_energy surges in markup), VWAP (above_streak builds), Momentum (adx_z rising)
+  NOTES      : Wyckoff accumulation complete. Volume was rising during flat. Now price follows.
+  ------------------------------------------------------------------
+
+  --- BEAR REVERSAL CONDITIONS (mirror — all direction signals flipped) ---
+
+  FILE GROUP : reversal_bear_vwap_rejection_001.csv  →  reversal_bear_vwap_rejection_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull context → spike above VWAP → rejected hard below
+  LAST 50    : vwap_rejection_qual spike, above_streak resets, bear candles
+  SIGNAL     : vwap=act-bear | momentum=avoid
+  MODELS HIT : VWAP (rejection_qual spike), Momentum (structure_bias=bearish)
+  NOTES      : Rejection of VWAP from above. vol_profile_asym flips negative.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_micro_absorption_001.csv  →  reversal_bear_micro_absorption_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Uptrend → absorption at top (small bodies + upper wicks) → bear reversal
+  LAST 50    : absorption_fp HIGH at top, then bear candles, upper wicks
+  SIGNAL     : micro=act-bear | candle=act-bear | momentum=avoid
+  MODELS HIT : Micro (absorption bear), Candle (pin_bear_qual)
+  NOTES      : Sellers absorbing at resistance. close_gravity falling from absorption zone.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_exhaustion_001.csv  →  reversal_bear_exhaustion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → shrinking bull bodies → doji → bear takeover
+  LAST 50    : ha_body flipping negative, body_ratio shrinking then bear
+  SIGNAL     : candle=act-bear | momentum=avoid | micro=act-bear
+  MODELS HIT : Candle (handoff=1 bear, ha_body_slope falling)
+  NOTES      : Bull exhaustion textbook. body_entropy HIGH in doji zone.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_climax_001.csv  →  reversal_bear_climax_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → BUYING CLIMAX candle → immediate drop
+  LAST 50    : Huge vol bull candle then immediate bear reversal
+  SIGNAL     : candle=act-bear | micro=act-bear | momentum=avoid
+  MODELS HIT : Micro (bar_energy climax, then bear), Candle (engulf bear after climax)
+  NOTES      : Buying climax = top. vol=12000 on climax candle.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_double_top_001.csv  →  reversal_bear_double_top_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Rise → top → pullback → retest top → fail → neckline breakdown
+  LAST 50    : Two equal highs, then break below neckline
+  SIGNAL     : momentum=avoid | breakout=now-bear | candle=act-bear
+  MODELS HIT : Momentum (trend_position falling to 0), Breakout (don_breakout bear)
+  NOTES      : Classic M pattern. Second top holds. Neckline break = signal.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_structure_shift_001.csv  →  reversal_bear_structure_shift_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → first Lower Low (CHoCH) in last 50
+  LAST 50    : CHoCH bear candle large, vol surge, early bear trend
+  SIGNAL     : momentum=avoid | breakout=now-bear
+  MODELS HIT : Momentum (break_strength negative), Breakout (don_position→0)
+  NOTES      : First LL after HH series. di_balance flips negative.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_false_breakout_001.csv  →  reversal_bear_false_breakout_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range → breaks above resistance (bull trap) → snaps back below
+  LAST 50    : False breakout then bear reclaim, continuation down
+  SIGNAL     : breakout=now-bear | candle=act-bear | micro=act-bear
+  MODELS HIT : Candle (pin_bear_qual on false break), Micro (cum_delta_5z negative)
+  NOTES      : Bulls trapped. Bear momentum after rejection strong.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_upthrust_001.csv  →  reversal_bear_upthrust_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Base → upthrust spike above resistance → snap back below (Wyckoff)
+  LAST 50    : Upthrust candle has large upper wick, then bear candles
+  SIGNAL     : candle=act-bear | micro=act-bear | breakout=now-bear
+  MODELS HIT : Candle (pin_bear_qual), Micro (rejection_qual negative/upper)
+  NOTES      : Wyckoff upthrust. Upper wick = rejection. Bears take control.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_trap_release_001.csv  →  reversal_bear_trap_release_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Base → bull stop hunt spike → explosive bear release
+  LAST 50    : Bull spike (stop hunt) immediately followed by larger bear move
+  SIGNAL     : candle=act-bear | micro=act-bear | momentum=avoid
+  MODELS HIT : Micro (cum_delta_5z flips bull to bear spike), Candle (engulf bear)
+  NOTES      : Bull stops run then bear momentum takes over.
+  ------------------------------------------------------------------
+
+  FILE GROUP : reversal_bear_distribution_complete_001.csv  →  reversal_bear_distribution_complete_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Rise → long distribution (flat, rising vol) → markdown begins
+  LAST 50    : Markdown: clean bear candles, vol high from distribution
+  SIGNAL     : momentum=avoid | micro=act-bear | vwap=act-bear
+  MODELS HIT : Micro (bar_energy bear surge), VWAP (above_streak=0)
+  NOTES      : Wyckoff distribution complete. Markdown = strong bear signal.
+  ------------------------------------------------------------------
+
+======================================================================
+  GROUP 4: EXHAUSTION CONDITIONS (15 conditions × 6 files = 90 files)
+======================================================================
+
+  NOTE: Exhaustion files show a COMPLETED trend that is ENDING.
+  The LAST 50 candles show STALLING / REVERSAL SIGNAL — NOT continuation.
+  Expected model output: signal=AVOID or WAIT (not go/act)
+  Use these to test model's ability to detect trend-end conditions.
+
+  --- BULL EXHAUSTION CONDITIONS ---
+
+  FILE GROUP : exhaustion_bull_trend_end_001.csv  →  exhaustion_bull_trend_end_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Strong bull trend for 200 bars → momentum dying (shrinking bodies) → upper wicks grow → stall
+  LAST 50    : Last 50: upper wicks dominant, close_gravity LOW, body_ratio falling, doji-like
+  SIGNAL     : signal=AVOID | candle=avoid | momentum=wait
+  MODELS HIT : Candle (wick_pressure=upper, seq_phase=exhausting), Momentum (adx_slope declining)
+  NOTES      : Models should NOT fire buy. Upper wicks = sellers pushing back at highs.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bull_vol_climax_001.csv  →  exhaustion_bull_vol_climax_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → volume SPIKE (10000) on final candles with price barely moving → fade
+  LAST 50    : Last 50: vol_z20 extreme HIGH, price gain tiny vs vol = exhaustion divergence
+  SIGNAL     : signal=AVOID | vwap=avoid | micro=avoid
+  MODELS HIT : VWAP (vol_climax divergence), Micro (absorption_fp = vol without movement)
+  NOTES      : Price-volume divergence. High vol + small body = sellers absorbing buyers at top.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bull_vwap_extreme_001.csv  →  exhaustion_bull_vwap_extreme_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend pushes price FAR above VWAP → upper wicks → stall → pull toward VWAP
+  LAST 50    : Last 50: vwap_sigma extremely HIGH (2+), upper wicks, close_gravity falling
+  SIGNAL     : signal=AVOID | vwap=avoid | momentum=wait
+  MODELS HIT : VWAP (vwap_sigma extreme, vwap_mr_z HIGH = mean reversion due), Momentum (tension extreme)
+  NOTES      : Far from VWAP = rubber band. Model should detect extreme stretch.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bull_micro_exhaustion_001.csv  →  exhaustion_bull_micro_exhaustion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → last 50 bars have tiny bodies, long upper wicks, doji-like candles
+  LAST 50    : Last 50: doji_context extreme, body_ratio LOW, wick_pressure=upper
+  SIGNAL     : signal=AVOID | candle=avoid | micro=avoid
+  MODELS HIT : Candle (doji_context HIGH, body_entropy HIGH, wick_pressure=upper)
+  NOTES      : Micro-level exhaustion visible in candle anatomy. No direction conviction.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bull_parabolic_end_001.csv  →  exhaustion_bull_parabolic_end_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Accelerating bull → parabolic (3 pip/candle bias) → reversal with upper wicks
+  LAST 50    : Last 50: extreme overextension then bear candles beginning
+  SIGNAL     : signal=AVOID | momentum=avoid | candle=avoid
+  MODELS HIT : Momentum (mean_reversion_stretch extreme, momentum_decay), Candle (parabolic then reversal)
+  NOTES      : Parabolic move + reversal in last 50. Most extreme overextension before collapse.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bull_buying_climax_001.csv  →  exhaustion_bull_buying_climax_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → final buying frenzy (vol=9000+, large bodies) → distribution begins
+  LAST 50    : Last 50: vol HIGH but price starts fading. Smart money distributing.
+  SIGNAL     : signal=AVOID | vwap=avoid | micro=avoid
+  MODELS HIT : VWAP (vol_climax_div, vol_surge_extreme), Micro (bar_energy spike then fade)
+  NOTES      : Climax ≠ continuation. High vol + fading price = distribution at top.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bull_overextension_001.csv  →  exhaustion_bull_overextension_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend runs far above all MAs → extreme stretch → last 50 = upper wicks and stall
+  LAST 50    : Last 50: upper wicks, mean_reversion_stretch extreme, close_gravity falling
+  SIGNAL     : signal=AVOID | momentum=wait | candle=avoid
+  MODELS HIT : Momentum (mean_reversion_stretch, tension), Candle (lb_close_grav LOW)
+  NOTES      : Overextension from mean. Momentum model tension feature should be extreme.
+  ------------------------------------------------------------------
+
+  --- BEAR EXHAUSTION CONDITIONS (mirror — signals flip, but still AVOID) ---
+
+  FILE GROUP : exhaustion_bear_trend_end_001.csv  →  exhaustion_bear_trend_end_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Strong bear → momentum dying → lower wicks grow → stall
+  LAST 50    : Lower wicks dominant, close_gravity HIGH (buying at lows), body_ratio falling
+  SIGNAL     : signal=AVOID | candle=avoid
+  MODELS HIT : Candle (wick_pressure=lower, exhausting phase)
+  NOTES      : Models should NOT fire sell. Lower wicks = buyers absorbing.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_vol_climax_001.csv  →  exhaustion_bear_vol_climax_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → vol spike → price barely moves → divergence
+  LAST 50    : vol_z20 extreme, price gain tiny vs vol
+  SIGNAL     : signal=AVOID | vwap=avoid | micro=avoid
+  MODELS HIT : VWAP (vol_climax_div bear), Micro (absorption bear)
+  NOTES      : High vol bear + small body = buyers absorbing sellers at bottom.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_vwap_extreme_001.csv  →  exhaustion_bear_vwap_extreme_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend pushes FAR below VWAP → lower wicks → pull toward VWAP
+  LAST 50    : vwap_sigma extreme NEGATIVE, lower wicks, close_gravity rising
+  SIGNAL     : signal=AVOID | vwap=avoid
+  MODELS HIT : VWAP (vwap_sigma<-2, vwap_mr_z HIGH)
+  NOTES      : Far below VWAP = mean reversion due. Avoid selling.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_micro_exhaustion_001.csv  →  exhaustion_bear_micro_exhaustion_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → last 50 = tiny bodies, long lower wicks, doji
+  LAST 50    : doji_context extreme bear-side, wick_pressure=lower
+  SIGNAL     : signal=AVOID | candle=avoid | micro=avoid
+  MODELS HIT : Candle (doji_context, body_entropy HIGH, wick_pressure=lower)
+  NOTES      : Bear micro-exhaustion. Close_gravity rising in last 50 despite bear.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_parabolic_end_001.csv  →  exhaustion_bear_parabolic_end_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Accelerating bear → parabolic drop → then bull candles begin
+  LAST 50    : Last 50: extreme bear then flip to bull. Parabolic exhausted.
+  SIGNAL     : signal=AVOID | momentum=avoid
+  MODELS HIT : Momentum (momentum_decay bear), Candle (reversal after parabolic)
+  NOTES      : Parabolic bear ends. Lower wicks and bull candles signal exhaustion.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_selling_climax_001.csv  →  exhaustion_bear_selling_climax_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear frenzy (vol=9000+) → distribution of sell → buyers step in
+  LAST 50    : Vol HIGH but bear fade. Smart money covering shorts.
+  SIGNAL     : signal=AVOID | vwap=avoid | micro=avoid
+  MODELS HIT : VWAP (vol_surge_extreme bear), Micro (absorption_fp)
+  NOTES      : Selling climax = potential bottom. Do NOT go short here.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_overextension_001.csv  →  exhaustion_bear_overextension_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear runs far below all MAs → stretch extreme → lower wicks and stall
+  LAST 50    : mean_reversion_stretch extreme negative, lower wicks in last 50
+  SIGNAL     : signal=AVOID | momentum=wait
+  MODELS HIT : Momentum (mean_reversion_stretch<-4, tension extreme)
+  NOTES      : Extreme bear overextension. Mean reversion due.
+  ------------------------------------------------------------------
+
+  FILE GROUP : exhaustion_bear_final_drop_001.csv  →  exhaustion_bear_final_drop_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → final acceleration → massive drop candle → dead cat
+  LAST 50    : Last 50: -450 pips. Massive bear then tiny recovery candles.
+  SIGNAL     : signal=AVOID (after drop) | momentum=avoid then wait
+  MODELS HIT : Momentum (ret_3_atr_norm extreme, then reversal), Micro (bar_energy bear then flat)
+  NOTES      : Final drop = selling climax. Dead cat bounce follows. Avoid both directions.
+  ------------------------------------------------------------------
+
+======================================================================
+  GROUP 5: TRAP CONDITIONS (15 conditions × 6 files = 90 files)
+======================================================================
+
+  NOTE: Trap files show conditions where a WRONG signal is set up.
+  The initial move looks like a signal but FAILS.
+  Expected model output: signal=AVOID (models should detect the trap)
+  Use these to test false positive rejection capability.
+
+  --- BULL TRAP CONDITIONS (initially looks bull, then fails) ---
+
+  FILE GROUP : trap_bull_false_breakout_001.csv  →  trap_bull_false_breakout_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range → breaks above resistance → IMMEDIATELY fails → drops hard in last 50
+  LAST 50    : Last 50: false break candle + large bear reversal. Upper wick on false break.
+  SIGNAL     : signal=AVOID | breakout=avoid | candle=avoid
+  MODELS HIT : Breakout (bkout_confirm briefly positive then negative), Candle (pin_bear_qual on reversal)
+  NOTES      : False breakout: close above resistance then close back BELOW in same or next candle.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bull_liquidity_grab_001.csv  →  trap_bull_liquidity_grab_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range → spike ABOVE key level to grab stops → massive reversal bear move
+  LAST 50    : Spike candle = huge upper wick. Then large vol bear candle. In last 50.
+  SIGNAL     : signal=AVOID | candle=avoid | micro=avoid
+  MODELS HIT : Candle (pin_bear_qual on spike, then bear engulf), Micro (cum_delta_5z flips negative)
+  NOTES      : Upper wick spike = stop run. vol=8000 on spike. Immediate reversal = trap.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bull_fake_reversal_001.csv  →  trap_bull_fake_reversal_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Prior bear trend → looks like bull reversal begins (bar 235) → fails → bear resumes
+  LAST 50    : Fake reversal: 15 bars of bull then drops through all prior levels
+  SIGNAL     : signal=AVOID | momentum=avoid | candle=avoid
+  MODELS HIT : Momentum (di_balance stays negative despite fake), Candle (handoff fails, seq_accel negative)
+  NOTES      : Fake reversal lures bulls then flushes them. Bear trend had NOT changed character.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bull_failed_breakout_001.csv  →  trap_bull_failed_breakout_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Squeeze → breakout candle → NO FOLLOW-THROUGH → price fails back into range
+  LAST 50    : Last 50: breakout candle (large body) then immediate reversal with upper wicks
+  SIGNAL     : signal=AVOID | breakout=avoid
+  MODELS HIT : Breakout (bkout_confirm briefly positive then 0), Candle (upper wicks after breakout)
+  NOTES      : Breakout without volume confirmation. No follow-through = failure. vol_sq_div LOW.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bull_distribution_trap_001.csv  →  trap_bull_distribution_trap_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend continues while smart money distributes (high vol, choppy) → sudden drop
+  LAST 50    : Last 50: price drops sharply despite prior bull trend. Vol was high = distribution.
+  SIGNAL     : signal=AVOID | momentum=avoid | vwap=avoid
+  MODELS HIT : VWAP (vol_mom_div = price↑ but vol selling), Momentum (structure_bias flips), Micro (absorption)
+  NOTES      : Choppy high-vol = institutions distributing. Model should catch vol-price divergence.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bull_stop_hunt_001.csv  →  trap_bull_stop_hunt_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → quick DIP to run stops below → snap back (fake hope) → bear resumes
+  LAST 50    : Last 50: stop hunt dip (vol spike), fake recovery, then bear continuation
+  SIGNAL     : signal=AVOID | momentum=avoid | candle=avoid
+  MODELS HIT : Momentum (di_balance stays negative), Micro (cum_delta_5z bear overall despite snap)
+  NOTES      : Stop hunt trap for bulls: buy the dip → immediately loses. Bear trend intact.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bull_absorption_fail_001.csv  →  trap_bull_absorption_fail_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend → absorption attempt fails → selling resumes hard in last 50
+  LAST 50    : Last 50: high vol + small bodies (absorption attempt) then bear acceleration
+  SIGNAL     : signal=AVOID | micro=avoid | momentum=avoid
+  MODELS HIT : Micro (absorption_fp present but fails = bear wins), Momentum (adx bear strengthening)
+  NOTES      : Absorption fails when sellers overwhelm buyers. vol_z20 HIGH but close_gravity LOW.
+  ------------------------------------------------------------------
+
+  --- BEAR TRAP CONDITIONS (initially looks bear, then fails) ---
+
+  FILE GROUP : trap_bear_false_breakdown_001.csv  →  trap_bear_false_breakdown_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range → breaks below support → immediately fails → bull recovery
+  LAST 50    : Lower wick false break then bull reclaim in last 50
+  SIGNAL     : signal=AVOID | breakout=avoid | candle=avoid
+  MODELS HIT : Candle (pin_bull_qual on false break), Micro (cum_delta_5z flips positive)
+  NOTES      : Bears trapped below support. Immediate reclaim = bull trap for bears.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_liquidity_grab_001.csv  →  trap_bear_liquidity_grab_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range → spike below key level (stop hunt) → massive bull reversal
+  LAST 50    : Lower wick spike, then large vol bull candle. In last 50.
+  SIGNAL     : signal=AVOID | candle=avoid | micro=avoid
+  MODELS HIT : Candle (pin_bull_qual spike, then bull engulf), Micro (cum_delta_5z flips positive)
+  NOTES      : Bear stop run. vol=8000 on spike. Immediate bull = bears trapped.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_fake_reversal_001.csv  →  trap_bear_fake_reversal_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Prior bull trend → fake bear reversal (15 bars) → bull resumes hard
+  LAST 50    : Fake bear: 15 bars of bear then large bull continuation through highs
+  SIGNAL     : signal=AVOID | momentum=go | candle=act-bull
+  MODELS HIT : Momentum (di_balance stays positive despite fake), Candle (handoff fails bull resumes)
+  NOTES      : Bear fake reversal lures shorts then squeezes. Bull trend unchanged.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_failed_breakdown_001.csv  →  trap_bear_failed_breakdown_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Squeeze → bear breakdown candle → no follow-through → price recovers
+  LAST 50    : Breakdown candle then immediate bull recovery with lower wicks
+  SIGNAL     : signal=AVOID | breakout=avoid
+  MODELS HIT : Breakout (bkout_confirm briefly negative then 0), Candle (lower wicks after breakdown)
+  NOTES      : Bear breakdown without volume = failure. vol_sq_div low. No follow-through.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_accumulation_trap_001.csv  →  trap_bear_accumulation_trap_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bear trend while smart money accumulates → sudden bull surge
+  LAST 50    : Last 50: sharp bull surge. Vol was rising during flat = hidden accumulation.
+  SIGNAL     : signal=AVOID (for bears) | momentum=go | micro=act
+  MODELS HIT : Micro (absorption_fp bull), Momentum (structure_bias flips bull)
+  NOTES      : Accumulation trap for shorts. Bears caught when price surges.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_stop_hunt_001.csv  →  trap_bear_stop_hunt_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → quick spike UP to run stops → snap back (fake) → bull resumes
+  LAST 50    : Last 50: spike up (stop hunt), fake drop, then bull continuation
+  SIGNAL     : signal=AVOID | momentum=go | candle=act-bull
+  MODELS HIT : Momentum (di_balance stays positive), Micro (cum_delta_5z bull overall)
+  NOTES      : Bull stop hunt trap for bears: sell the spike → immediately loses.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_absorption_fail_001.csv  →  trap_bear_absorption_fail_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → bear absorption attempt fails → bull acceleration resumes
+  LAST 50    : Last 50: high vol + small bodies then bull surge past resistance
+  SIGNAL     : signal=AVOID (for bears) | micro=act | momentum=go
+  MODELS HIT : Micro (absorption_fp bear fails), Momentum (adx bull strengthening)
+  NOTES      : Bear absorption fails. Buyers overwhelm. close_gravity HIGH.
+  ------------------------------------------------------------------
+
+  FILE GROUP : trap_bear_failed_reversal_001.csv  →  trap_bear_failed_reversal_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Bull trend → fake bear reversal attempt → bull trend resumes strongly
+  LAST 50    : 15-bar fake bear then large bull acceleration back through highs
+  SIGNAL     : signal=AVOID | momentum=go | candle=act-bull
+  MODELS HIT : Momentum (di_balance positive), Candle (fractal_bull resumes)
+  NOTES      : Failed bear reversal. Bull trend structural integrity maintained.
+  ------------------------------------------------------------------
+
+======================================================================
+  GROUP 6: RANGE CONDITIONS (10 conditions × 6 files = 60 files)
+======================================================================
+
+  NOTE: Range files show NO directional signal.
+  Expected model output: signal=AVOID or WAIT for all models.
+  Use these to test false positive rate — models should NOT fire.
+  Price oscillates: total range typically 40-120 pips across 300 bars.
+
+  FILE GROUP : range_low_vol_001.csv  →  range_low_vol_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Tight oscillation with LOW volume throughout all 300 bars
+  LAST 50    : vol_z20 LOW, ATR LOW, equal bull/bear candle distribution, no trend
+  SIGNAL     : signal=AVOID | all models=avoid
+  MODELS HIT : Breakout (squeeze_stack LOW, no squeeze), Momentum (adx_z LOW, efficiency_ratio LOW)
+  NOTES      : Quietest market condition. vol_z30 and vol_z100 both negative. No signal.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_high_vol_001.csv  →  range_high_vol_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Oscillating range with HIGH volume — choppy, active, no direction
+  LAST 50    : vol_z20 HIGH, but price goes nowhere. Vol-price divergence.
+  SIGNAL     : signal=AVOID | vwap=avoid | micro=avoid
+  MODELS HIT : VWAP (vol HIGH but vol_mom_div = divergence), Micro (absorption_fp throughout = both sides)
+  NOTES      : High vol range = institutions fighting. No winner. vol_efficiency LOW.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_vwap_rotation_001.csv  →  range_vwap_rotation_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Price oscillates symmetrically above and below VWAP on 25-bar cycle
+  LAST 50    : vwap_touch_density HIGH, above_vwap_streak LOW, vwap_dev_atr oscillates
+  SIGNAL     : signal=AVOID | vwap=avoid
+  MODELS HIT : VWAP (vwap_touch_density HIGH, delta_at_vwap alternating), Momentum (di_balance near 0)
+  NOTES      : Mean-reverting around VWAP. Good for testing VWAP model's AVOID trigger.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_micro_noise_001.csv  →  range_micro_noise_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Extremely tight choppy range — random small candles, no structure
+  LAST 50    : Smallest ATR in dataset (0.38x base). Random direction each bar.
+  SIGNAL     : signal=AVOID | all models=avoid
+  MODELS HIT : All models: features near 0. No signal in any head.
+  NOTES      : Maximum noise, minimum signal. Tests model robustness to noise.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_balanced_001.csv  →  range_balanced_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Balanced buyers/sellers — 20-bar bull, 20-bar bear, 20-bar flat cycles
+  LAST 50    : Efficiency ratio LOW (much noise vs direction), adx_z LOW
+  SIGNAL     : signal=AVOID | momentum=avoid | candle=avoid
+  MODELS HIT : Momentum (efficiency_ratio LOW, momentum_persistence LOW), Candle (seq_dir_ratio ~0.5)
+  NOTES      : Perfectly balanced market. No structural bias. Good negative test.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_compression_001.csv  →  range_compression_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range that gets progressively tighter across 300 bars (ATR shrinks linearly)
+  LAST 50    : Last 50: tightest candles of entire file. BB deep inside KC → squeeze building
+  SIGNAL     : signal=WAIT | breakout=forming
+  MODELS HIT : Breakout (consec_squeeze rising, squeeze_maturity building, kb_ratio declining)
+  NOTES      : Pre-breakout compression. squeeze_stack should be 2-3 in last 50. Direction unknown.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_expansion_fake_001.csv  →  range_expansion_fake_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range with periodic fake expansions both ways — fakeouts bull and bear alternately
+  LAST 50    : band_walk_bull and band_walk_bear both fire briefly then reset repeatedly
+  SIGNAL     : signal=AVOID | breakout=avoid
+  MODELS HIT : Breakout (bkout_confirm fires briefly then fails both ways), Candle (handoff=1 repeatedly)
+  NOTES      : Tests model's ability to avoid false breakout signals in noisy expansion environment.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_mid_structure_001.csv  →  range_mid_structure_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Price oscillates with clear mid-point structure — bounces off center VWAP repeatedly
+  LAST 50    : vwap_touch_density HIGH, bb_position oscillates around 0.5, no sustained walk
+  SIGNAL     : signal=AVOID | vwap=avoid | breakout=avoid
+  MODELS HIT : VWAP (vwap_touch_density, vwap_mr_z oscillating), Breakout (no sustained band walk)
+  NOTES      : Mid-range structure. Price respects VWAP as magnet. No breakout tendency.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_accumulation_001.csv  →  range_accumulation_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range with very subtle upward drift (hidden accumulation) — barely detectable
+  LAST 50    : Total range ~60-100 pips but slightly higher lows. vol_z rising slowly.
+  SIGNAL     : signal=WAIT | momentum=wait | micro=wait
+  MODELS HIT : Momentum (trend_position barely rising), Micro (bar_energy LOW but rising)
+  NOTES      : Ambiguous condition. Slight bull bias but NOT enough to fire signal. Edge case.
+  ------------------------------------------------------------------
+
+  FILE GROUP : range_distribution_001.csv  →  range_distribution_006.csv
+  FILES      : 6 files
+  STRUCTURE  : Range with very subtle downward drift (hidden distribution) — barely detectable
+  LAST 50    : Total range ~60-100 pips but slightly lower highs. vol_z rising slowly.
+  SIGNAL     : signal=WAIT | momentum=wait | micro=wait
+  MODELS HIT : Momentum (trend_position barely falling), Micro (bar_energy LOW but rising bear)
+  NOTES      : Opposite of range_accumulation. Slight bear bias not enough to fire. Edge case.
+  ------------------------------------------------------------------
+
+======================================================================
+  QUICK REFERENCE: EXPECTED MODEL OUTPUTS BY CONDITION
+======================================================================
+
+  CONDITION TYPE          | MOMENTUM  | VWAP  | BREAKOUT | CANDLE | MICRO
+  ------------------------------------------------------------------
+  trend_bull_*            | go/up     | act   | wait     | act    | act  
+  trend_bear_*            | avoid/dn  | act   | wait     | act    | act  
+  breakout_bull_squeeze_* | go        | wait  | NOW      | act    | act  
+  breakout_bear_squeeze_* | avoid     | wait  | NOW-bear | act    | act  
+  reversal_bull_*         | go        | act   | now      | act    | act  
+  reversal_bear_*         | avoid     | act   | now-bear | act    | act  
+  exhaustion_bull_*       | wait      | avoid | avoid    | avoid  | avoid
+  exhaustion_bear_*       | wait      | avoid | avoid    | avoid  | avoid
+  trap_bull_*             | avoid     | avoid | avoid    | avoid  | avoid
+  trap_bear_*             | avoid     | avoid | avoid    | avoid  | avoid
+  range_*                 | avoid     | avoid | avoid    | avoid  | avoid
+  range_compression       | wait      | wait  | forming  | wait   | wait 
+
+======================================================================
+  KEY FEATURE SIGNATURES BY CONDITION
+======================================================================
+
+  FEATURE              | WHERE IT IS STRONGEST
+  ------------------------------------------------------------
+  adx_z HIGH           | trend_*_strong, institutional_drive
+  efficiency_ratio HIGH | trend_*_slow_build, institutional_drive
+  squeeze_stack=3      | breakout_*_squeeze_*, compression_release
+  squeeze_maturity HIGH | breakout_*_squeeze_strong (155+ bars)
+  exp_velocity HIGH    | breakout_*_band_expansion, compression_release
+  bkout_confirm HIGH   | breakout_*_initial, range_escape, vol_expansion
+  vwap_reclaim_qual    | trend_bull_vwap_reclaim, reversal_bull_vwap_reclaim
+  above_vwap_streak    | trend_bull_* (all), vwap_aligned breakouts
+  cum_delta_5z HIGH    | trend_bull_institutional, micro_accumulation
+  absorption_fp=3      | reversal_bull_micro_absorption, accumulation_complete
+  rejection_qual HIGH  | spring, trap releases, false breakdowns
+  bar_energy HIGH      | institutional_drive, high_momentum, climax candles
+  mean_reversion_stretch | exhaustion_*_overextension, vwap_extreme
+  vwap_sigma >2        | exhaustion_bull_vwap_extreme (must AVOID)
+  vol_climax_div       | exhaustion_*_vol_climax, buying_climax, selling_climax
+  fractal_bull=1       | trend_bull_*, reversal_bull_*
+  body_entropy HIGH    | exhaustion_*_micro_exhaustion, reversal_*_exhaustion
+  di_balance >0.3      | trend_bull_strong, bull acceleration
+  di_balance <-0.3     | trend_bear_strong, bear acceleration
+  momentum_decay       | exhaustion_*_parabolic_end
+  slope_alignment=+1   | breakout_bull_multi_tf, trend_bull_strong
+  tension HIGH         | exhaustion_*_overextension (AVOID signal)
+
+======================================================================
+  FILE NAMING CONVENTION
+======================================================================
+
+  Format: {condition_name}_{number}.csv
+  Example: trend_bull_early_ignition_003.csv
+
+  Numbers 001-006 = different random seeds (same condition, slight variation)
+  All 6 files of same condition simulate the SAME market regime
+  Variation between files = natural market randomness within regime
+
+  Prefix guide:
+    trend_bull_*    = directional bullish trend (various sub-types)
+    trend_bear_*    = directional bearish trend (various sub-types)
+    breakout_bull_* = squeeze-to-bull-breakout pattern
+    breakout_bear_* = squeeze-to-bear-breakout pattern
+    reversal_bull_* = price was going down, now reversing up
+    reversal_bear_* = price was going up, now reversing down
+    exhaustion_bull_*= bull trend ending (AVOID signal)
+    exhaustion_bear_*= bear trend ending (AVOID signal)
+    trap_bull_*     = looks bullish, fails (AVOID signal)
+    trap_bear_*     = looks bearish, fails (AVOID signal)
+    range_*         = no trend, sideways (AVOID signal)
+
+======================================================================
+  END OF REFERENCE — 600 FILES TOTAL
+  Generated for ensemble model output mapping
+======================================================================

@@ -1,0 +1,166 @@
+{
+  "EURUSD": {
+    "timestamp": "2026-02-26T01:15:13.172200",
+    "raw": {
+      "momentum": {
+        "momentum_state": 1,
+        "momentum_slope_zone": 1,
+        "entry_bias": 1,
+        "confidence": 0.9996762275695801
+      },
+      "breakout": {
+        "squeeze_state": 0,
+        "breakout_bias": 1,
+        "entry_viability": 1,
+        "confidence": 1.0
+      },
+      "micro": {
+        "burst_type": 1,
+        "tail_pressure_direction": 1,
+        "micro_risk_zone": 1,
+        "confidence": 0.9999970197677612
+      },
+      "vwap": {
+        "vwap_zone": 2,
+        "volume_pressure": 1,
+        "liquidity_structure": 1,
+        "confidence": 1.0
+      },
+      "candle": {
+        "sequence_type": 4,
+        "candle_dominance": 0,
+        "pattern_strength": 0,
+        "confidence": 1.0
+      }
+    },
+    "condition_code": "L-111-B011-V2x11-X111-C400",
+    "condition_id": 22,
+    "final_bias": "long",
+    "confidence": 0.3125,
+    "consensus_used": false,
+    "meaning": "Best match override: Bullish continuation + micro support (2) + price accepted above VWAP"
+  },
+  "XAUUSD": {
+    "timestamp": "2026-02-26T01:15:13.322841",
+    "raw": {
+      "momentum": {
+        "momentum_state": 2,
+        "momentum_slope_zone": 1,
+        "entry_bias": 1,
+        "confidence": 1.0
+      },
+      "breakout": {
+        "squeeze_state": 0,
+        "breakout_bias": 1,
+        "entry_viability": 1,
+        "confidence": 1.0
+      },
+      "micro": {
+        "burst_type": 1,
+        "tail_pressure_direction": 1,
+        "micro_risk_zone": 1,
+        "confidence": 1.0
+      },
+      "vwap": {
+        "vwap_zone": 2,
+        "volume_pressure": 1,
+        "liquidity_structure": 1,
+        "confidence": 1.0
+      },
+      "candle": {
+        "sequence_type": 4,
+        "candle_dominance": 0,
+        "pattern_strength": 1,
+        "confidence": 1.0
+      }
+    },
+    "condition_code": "L-211-B011-V2x11-X111-C401",
+    "condition_id": 22,
+    "final_bias": "long",
+    "confidence": 0.25,
+    "consensus_used": false,
+    "meaning": "Best match override: Bullish continuation + micro support (2) + price accepted above VWAP"
+  },
+  "USDJPY": {
+    "timestamp": "2026-02-26T01:15:13.460634",
+    "raw": {
+      "momentum": {
+        "momentum_state": 1,
+        "momentum_slope_zone": 1,
+        "entry_bias": 1,
+        "confidence": 0.9997943043708801
+      },
+      "breakout": {
+        "squeeze_state": 0,
+        "breakout_bias": 1,
+        "entry_viability": 1,
+        "confidence": 1.0
+      },
+      "micro": {
+        "burst_type": 1,
+        "tail_pressure_direction": 1,
+        "micro_risk_zone": 1,
+        "confidence": 1.0
+      },
+      "vwap": {
+        "vwap_zone": 2,
+        "volume_pressure": 1,
+        "liquidity_structure": 1,
+        "confidence": 1.0
+      },
+      "candle": {
+        "sequence_type": 4,
+        "candle_dominance": 0,
+        "pattern_strength": 0,
+        "confidence": 1.0
+      }
+    },
+    "condition_code": "L-111-B011-V2x11-X111-C400",
+    "condition_id": 22,
+    "final_bias": "long",
+    "confidence": 0.3125,
+    "consensus_used": false,
+    "meaning": "Best match override: Bullish continuation + micro support (2) + price accepted above VWAP"
+  },
+  "DXYUSD": {
+    "timestamp": "2026-02-26T01:15:13.594073",
+    "raw": {
+      "momentum": {
+        "momentum_state": 1,
+        "momentum_slope_zone": 1,
+        "entry_bias": 1,
+        "confidence": 0.9998483657836914
+      },
+      "breakout": {
+        "squeeze_state": 0,
+        "breakout_bias": 1,
+        "entry_viability": 1,
+        "confidence": 1.0
+      },
+      "micro": {
+        "burst_type": 1,
+        "tail_pressure_direction": 1,
+        "micro_risk_zone": 1,
+        "confidence": 1.0
+      },
+      "vwap": {
+        "vwap_zone": 2,
+        "volume_pressure": 1,
+        "liquidity_structure": 1,
+        "confidence": 1.0
+      },
+      "candle": {
+        "sequence_type": 4,
+        "candle_dominance": 0,
+        "pattern_strength": 0,
+        "confidence": 1.0
+      }
+    },
+    "condition_code": "L-111-B011-V2x11-X111-C400",
+    "condition_id": 22,
+    "final_bias": "long",
+    "confidence": 0.3125,
+    "consensus_used": false,
+    "meaning": "Best match override: Bullish continuation + micro support (2) + price accepted above VWAP"
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "timestamp": "2026-02-27T19:00:29.661119",
+    "EURUSD": {
+        "price": 1.18183,
+        "open": 1.18175,
+        "pressure": 7.999999999985796e-05,
+        "direction": "BULL"
+    },
+    "USDJPY": {
+        "price": 155.999,
+        "open": 156.008,
+        "pressure": -0.009000000000014552,
+        "direction": "BEAR"
+    },
+    "XAUUSD": {
+        "price": 5246.05,
+        "open": 5245.43,
+        "pressure": 0.6199999999998909,
+        "direction": "BULL"
+    }
+}

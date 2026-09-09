@@ -1,0 +1,122 @@
+import socket
+import threading
+import time
+import MetaTrader5 as mt5
+
+HOST = "127.0.0.1"
+PORT = 5050
+
+# =========================
+# CONNECT MT5 PYTHON
+# =========================
+if not mt5.initialize():
+    print("❌ MT5 init failed")
+    quit()
+
+symbol = "EURUSD"
+
+# =========================
+# SOCKET CLIENT
+# =========================
+class Tester:
+    def __init__(self):
+        self.conn = None
+
+    def start(self):
+        server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server.bind((HOST, PORT))
+        server.listen(1)
+
+        print("🟡 Waiting for EA...")
+        self.conn, addr = server.accept()
+        print("🟢 Connected:", addr)
+
+        threading.Thread(target=self.recv, daemon=True).start()
+
+    def recv(self):
+        buffer = ""
+        while True:
+            data = self.conn.recv(1024).decode()
+            if not data:
+                break
+
+            buffer += data
+            while "\n" in buffer:
+                line, buffer = buffer.split("\n", 1)
+                print("📩 EA:", line)
+
+    def send(self, msg):
+        self.conn.send((msg + "\n").encode())
+        print("📤 SENT:", msg)
+
+
+# =========================
+# VERIFY FUNCTIONS
+# =========================
+def wait_for_position(symbol, timeout=10):
+    start = time.time()
+
+    while time.time() - start < timeout:
+        positions = mt5.positions_get(symbol=symbol)
+
+        if positions:
+            return positions[0]
+
+        time.sleep(0.5)
+
+    return None
+
+
+def monitor_position(ticket):
+    print("👀 Monitoring position...")
+
+    while True:
+        pos = mt5.positions_get(ticket=ticket)
+
+        if not pos:
+            print("🔴 Position closed")
+            break
+
+        p = pos[0]
+        print(f"📊 Profit: {p.profit} | SL: {p.sl} | TP: {p.tp}")
+
+        time.sleep(1)
+
+
+# =========================
+# TEST FLOW
+# =========================
+if __name__ == "__main__":
+    tester = Tester()
+    tester.start()
+
+    time.sleep(2)
+
+    # Define SL/TP (example)
+    sl = 1.0800
+    tp = 1.0900
+
+    print("\n🚀 Sending BUY with SL/TP\n")
+
+    tester.send(f"BUY,{symbol},0.1,1,{sl},{tp}")
+
+    # Wait for position
+    pos = wait_for_position(symbol)
+
+    if pos:
+        print("\n✅ POSITION FOUND")
+        print("Ticket:", pos.ticket)
+        print("SL:", pos.sl)
+        print("TP:", pos.tp)
+
+        # Validate SL/TP
+        if abs(pos.sl - sl) < 0.0001 and abs(pos.tp - tp) < 0.0001:
+            print("✅ SL/TP correctly set")
+        else:
+            print("❌ SL/TP mismatch")
+
+        # Monitor
+        monitor_position(pos.ticket)
+
+    else:
+        print("❌ No position detected")

@@ -1,0 +1,6 @@
+This is project file of direct gemini attempt.
+1. in this we tried to directly pass ohlcv data to models
+2. there is almost 0 or very basic info extraction out of ohlcv,
+3.there is no use of model of AI training of prediction
+4. raw data/features are used
+5. model used in It are free api of google and models offered by google.

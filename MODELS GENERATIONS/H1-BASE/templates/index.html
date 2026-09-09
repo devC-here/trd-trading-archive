@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EURUSD.0 H1/H2 High-Pip Swing Ensemble Monitor</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-layout">
+        <!-- TOP STATUS HEADER -->
+        <header class="top-nav">
+            <div class="nav-group left">
+                <div class="brand">
+                    <span class="nav-title">⚡ EURUSD.0 SWING ENSEMBLE</span>
+                    <span class="model-count-tag">60 H1/H2 MODELS</span>
+                </div>
+                <span class="pill-badge" id="source-pill">LIVE MT5</span>
+                <span class="ticker-box">BID: <strong id="bid-price">1.16256</strong></span>
+                <span class="ticker-box">ASK: <strong id="ask-price">1.16256</strong></span>
+                <span class="ticker-box">SPREAD: <span id="spread-pips">0.1p</span></span>
+            </div>
+
+            <div class="nav-group center">
+                <span class="swing-regime-label">SWING REGIME:</span>
+                <span class="swing-regime-val" id="master-regime">Bullish H2/H1 Swing Expansion</span>
+            </div>
+
+            <div class="nav-group right">
+                <button id="mode-btn" class="nav-btn">Toggle Live/Mock</button>
+                <div class="clock-box" id="server-clock">--:--:--</div>
+            </div>
+        </header>
+
+        <!-- MASTER ACTIONABLE SWING EXECUTION CARD (PINNED AT TOP) -->
+        <section class="master-decision-section">
+            <div class="master-card" id="master-card">
+                <div class="master-left">
+                    <div class="master-badge-row">
+                        <span class="master-sub-tag">SINGLE ACTIONABLE SWING ORDER (H1/H2 ENSEMBLE)</span>
+                        <span class="holding-tag" id="master-holding">24 to 48 Hours</span>
+                    </div>
+                    <div class="master-action-row">
+                        <h1 class="master-action-title" id="master-action">STRONG BUY</h1>
+                        <div class="confluence-meter-box">
+                            <span class="conf-label">Confluence Score:</span>
+                            <strong class="conf-score" id="master-conf-score">98%</strong>
+                            <div class="conf-bar-track">
+                                <div class="conf-bar-fill" id="master-conf-bar" style="width: 98%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="master-drivers-row">
+                        <span class="drivers-label">Primary Agreeing Drivers:</span>
+                        <div class="driver-pills" id="master-driver-pills">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="master-right">
+                    <div class="order-grid">
+                        <div class="order-box">
+                            <span class="order-label">SUGGESTED ENTRY</span>
+                            <span class="order-val" id="master-entry">1.16256</span>
+                        </div>
+                        <div class="order-box sl-box">
+                            <span class="order-label">STOP LOSS (SL)</span>
+                            <span class="order-val" id="master-sl">1.16106</span>
+                            <span class="order-sub" id="master-risk">-15.0 pips</span>
+                        </div>
+                        <div class="order-box tp1-box">
+                            <span class="order-label">TARGET 1 (TP1)</span>
+                            <span class="order-val" id="master-tp1">1.16781</span>
+                            <span class="order-sub" id="master-reward1">+52.5 pips</span>
+                        </div>
+                        <div class="order-box tp2-box">
+                            <span class="order-label">TARGET 2 (RUNNER TP2)</span>
+                            <span class="order-val" id="master-tp2">1.17231</span>
+                            <span class="order-sub" id="master-reward2">+97.5 pips (1:5.0 RR)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTER & SEARCH BAR -->
+        <section class="filter-strip">
+            <div class="category-pills" id="category-pills">
+                <button class="cat-pill active" data-cat="ALL">All Curated (60)</button>
+                <button class="cat-pill" data-cat="A">[A] SMC & Liquidity (8)</button>
+                <button class="cat-pill" data-cat="B">[B] Trend & Moving Avg (4)</button>
+                <button class="cat-pill" data-cat="C">[C] Oscillators & Reversals (4)</button>
+                <button class="cat-pill" data-cat="D">[D] Pivots & Volatility (6)</button>
+                <button class="cat-pill" data-cat="E">[E] Price Action & S/D (8)</button>
+                <button class="cat-pill" data-cat="F">[F] Momentum & Pullback (6)</button>
+                <button class="cat-pill" data-cat="G">[G] Confluence & Traps (10)</button>
+                <button class="cat-pill" data-cat="H">[H] Imbalance & Breakouts (14)</button>
+                <button class="cat-pill filter-signals" data-cat="SIGNALS">🔥 Active Drivers (<span id="active-sig-badge">0</span>)</button>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="strategy-search" placeholder="Search H1/H2 strategy by name, #ID, or keyword (e.g. breaker, 50 ema, vwap)..." autocomplete="off">
+                <button id="clear-search" class="clear-btn" title="Clear search">✕</button>
+            </div>
+        </section>
+
+        <!-- 60 H1/H2 STRATEGY BANNERS GRID -->
+        <section class="banners-grid-wrapper">
+            <div class="banners-grid" id="cards-grid">
+                <div class="loading-state">Initializing 60 H1/H2 swing models for EURUSD.0...</div>
+            </div>
+        </section>
+
+        <!-- LIVE COMPARISON EXPANDED INSPECTOR -->
+        <section class="live-inspector" id="active-script-inspector">
+            <div class="inspector-header">
+                <div class="insp-title-wrap">
+                    <span class="insp-badge" id="insp-script-id">STRATEGY #1</span>
+                    <h2 class="insp-title" id="insp-script-name">ICT Breaker Block</h2>
+                    <span class="insp-tf" id="insp-timeframe">H1 / H2</span>
+                    <span class="insp-cat" id="insp-category">[A] SMC & Liquidity</span>
+                    <span class="insp-dir-pill" id="insp-direction">BUY</span>
+                    <div class="insp-true-banner" id="insp-true-banner">
+                        <span class="insp-true-count" id="insp-true-count">3 / 3 Conditions TRUE</span>
+                        <span class="insp-true-pct" id="insp-true-pct">(H1 & H2 Aligned)</span>
+                    </div>
+                </div>
+                <div class="insp-controls">
+                    <button id="prev-script-btn" class="nav-btn" title="Previous Strategy (Arrow Left)">◀ Prev</button>
+                    <button id="next-script-btn" class="nav-btn" title="Next Strategy (Arrow Right)">Next ▶</button>
+                    <button id="toggle-insp-btn" class="nav-btn insp-close-btn" title="Toggle Compact View">↕ Toggle Size</button>
+                </div>
+            </div>
+
+            <div class="inspector-body" id="inspector-body">
+                <!-- LIVE COMPARISON TABLE -->
+                <div class="insp-table-wrap">
+                    <div class="table-title-bar">
+                        <span>📊 LIVE H1/H2 CONFLUENCE: REQUIRED TARGET VS CURRENT MARKET READING</span>
+                        <span class="live-pulse-indicator">● H1/H2 TICK SYNC</span>
+                    </div>
+                    <div class="table-container">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 44px;">#</th>
+                                    <th style="width: 25%;">Condition Sequence</th>
+                                    <th style="width: 28%;">Required Value (Target)</th>
+                                    <th style="width: 25%;">Current Value (Live MT5)</th>
+                                    <th style="width: 14%;">Delta / Distance</th>
+                                    <th style="width: 80px;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="comparison-tbody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR: LIVE INDICATORS & EXECUTION ENVELOPE -->
+                <div class="insp-side-panel">
+                    <div class="side-card">
+                        <div class="side-card-title">Live Indicators (EURUSD.0)</div>
+                        <div class="metrics-grid" id="insp-metrics-grid">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="side-card" id="insp-signal-card">
+                        <div class="side-card-title">High-Pip Swing Setup</div>
+                        <div class="signal-details" id="insp-signal-details">
+                            <div class="empty-signal">Evaluating H1/H2 alignment...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM STATUS STRIP -->
+        <footer class="bottom-bar">
+            <div class="summary-left">
+                <span>Account: <strong id="mt5-account">6288307 (Deriv-Demo)</strong></span>
+                <span class="divider">|</span>
+                <span>Active Symbol: <strong id="active-symbol">EURUSD.0</strong></span>
+                <span class="divider">|</span>
+                <span>Curated Swing Models: <strong>60 / 60 (H1 & H2 Native)</strong></span>
+            </div>
+            <div class="summary-right">
+                <span id="active-signals-summary">Targeting: <strong>50 to 120+ Pips</strong></span>
+                <span class="divider">|</span>
+                <span class="status-live-indicator">● SWING ENSEMBLE ACTIVE</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
