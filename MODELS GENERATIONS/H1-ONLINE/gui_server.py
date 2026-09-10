@@ -30,9 +30,22 @@ def background_engine_loop():
     """Continuously evaluates 60 H1/H2 strategies and updates the master decision."""
     global is_running
     print("[+] Background H1/H2 Swing Ensemble Engine started for EURUSD.0.", flush=True)
+    cycle_count = 0
     while is_running:
         try:
-            engine.evaluate_cycle()
+            snap = engine.evaluate_cycle()
+            cycle_count += 1
+            # Every 30 cycles (~60s), output a status heartbeat to cloud logs
+            if cycle_count % 30 == 0:
+                md = snap.get("master_decision", {})
+                dp = snap.get("demo_portfolio", {})
+                print(
+                    f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [BG-ENGINE #{cycle_count}] "
+                    f"Action: {md.get('action')} | Timing: {md.get('timing_badge')} | "
+                    f"Confluence: {md.get('confluence_score')}% | Demo Banked: {dp.get('net_pips_banked')}p | "
+                    f"Active Trades: {len(dp.get('active_trades', []))}",
+                    flush=True
+                )
         except Exception as e:
             print(f"[!] Error in evaluation cycle: {e}", flush=True)
         time.sleep(2.0)
@@ -40,20 +53,36 @@ def background_engine_loop():
 
 def keep_alive_pinger_loop(port: int):
     """Pings the server every 9 minutes to prevent Render/Cloud free tiers from sleeping."""
-    time.sleep(15.0)  # Wait for initial server boot
+    time.sleep(20.0)  # Wait for initial server boot
     print("[+] 24/7 Keep-Alive Pinger active. Server will not spin down on inactivity.", flush=True)
-    external_url = os.environ.get("RENDER_EXTERNAL_URL", os.environ.get("APP_URL", "")).rstrip("/")
+    external_url = os.environ.get("RENDER_EXTERNAL_URL", os.environ.get("APP_URL", "https://trd-trading-archive.onrender.com")).rstrip("/")
 
     while is_running:
         target_url = f"{external_url}/healthz" if external_url else f"http://127.0.0.1:{port}/healthz"
         try:
             req = urllib.request.Request(target_url, headers={"User-Agent": "KeepAlivePinger/2.0"})
-            with urllib.request.urlopen(req, timeout=10) as resp:
+            with urllib.request.urlopen(req, timeout=15) as resp:
                 if resp.status == 200:
                     print(f"[{datetime.datetime.now().strftime('%H:%M:%S')}] [KEEP-ALIVE] Heartbeat ping successful -> {target_url}", flush=True)
         except Exception as e:
             print(f"[!] Keep-alive ping notice: {e}", flush=True)
         time.sleep(540.0)  # Ping every 9 minutes (well before 15m idle threshold)
+
+
+# Start background worker threads automatically (works in Gunicorn & direct python)
+_workers_started = False
+def init_background_workers():
+    global _workers_started
+    if not _workers_started:
+        _workers_started = True
+        configured_port = int(os.environ.get("PORT", 5000))
+        t_engine = threading.Thread(target=background_engine_loop, daemon=True)
+        t_engine.start()
+        t_pinger = threading.Thread(target=keep_alive_pinger_loop, args=(configured_port,), daemon=True)
+        t_pinger.start()
+        print("[+] Autonomous 24/7 Background Workers Initialized (Engine + Pinger).", flush=True)
+
+init_background_workers()
 
 
 @app.route("/")
@@ -115,13 +144,7 @@ def update_settings():
 
 
 def start_server(host: str = "0.0.0.0", port: int = 5000, debug: bool = False):
-    # 1. Background strategy evaluation loop
-    t_engine = threading.Thread(target=background_engine_loop, daemon=True)
-    t_engine.start()
-
-    # 2. 24/7 Keep-alive self-pinger loop (runs like a VPS)
-    t_pinger = threading.Thread(target=keep_alive_pinger_loop, args=(port,), daemon=True)
-    t_pinger.start()
+    init_background_workers()
 
     print("==================================================================", flush=True)
     print("[*] H1/H2 SWING ENSEMBLE SERVER RUNNING (24/7 AUTONOMOUS VPS MODE)", flush=True)
