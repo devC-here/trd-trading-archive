@@ -1,0 +1,16 @@
+# Core application runs on standard library (tkinter) with zero required external packages.
+# Below are optional modern GUI frameworks you can install whenever needed:
+
+# CustomTkinter (Modern rounded dark-mode widgets based on Tkinter)
+# customtkinter>=5.2.0
+
+# PyQt6 / PySide6 (Industry-standard cross-platform Qt GUI framework)
+# PyQt6>=6.6.0
+# PySide6>=6.6.0
+
+# NiceGUI / Streamlit (Alternative web-based desktop GUIs)
+# nicegui>=1.4.0
+# streamlit>=1.30.0
+
+# Data Visualization
+# matplotlib>=3.8.0

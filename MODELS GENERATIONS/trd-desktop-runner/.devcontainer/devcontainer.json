@@ -1,0 +1,40 @@
+{
+  "name": "TRD MetaTrader 5 (Codespaces Linux)",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [6080, 5901, 5000],
+  "portsAttributes": {
+    "6080": {
+      "label": "MT5 Desktop GUI (noVNC)",
+      "onAutoForward": "openBrowser"
+    },
+    "5901": {
+      "label": "Direct VNC Client",
+      "onAutoForward": "silent"
+    },
+    "5000": {
+      "label": "Trading API / Dashboard",
+      "onAutoForward": "silent"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "containerEnv": {
+    "DISPLAY": ":1",
+    "WINEPREFIX": "/home/vscode/.wine",
+    "WINEDEBUG": "-all"
+  },
+  "remoteUser": "vscode"
+}
