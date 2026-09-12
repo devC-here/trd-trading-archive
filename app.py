@@ -8,8 +8,16 @@ import os
 import sys
 import platform
 import datetime
-import tkinter as tk
-from tkinter import ttk, messagebox
+
+# Check for tkinter
+try:
+    import tkinter as tk
+    from tkinter import ttk, messagebox
+except ImportError:
+    print("\n[!] Error: 'tkinter' is not installed in this Python environment.")
+    print("    To fix, run:")
+    print("       sudo apt update && sudo apt install -y python3-tk\n")
+    sys.exit(1)
 
 
 class DesktopTestApp:

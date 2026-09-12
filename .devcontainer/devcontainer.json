@@ -1,40 +1,22 @@
 {
-  "name": "TRD MetaTrader 5 (Codespaces Linux)",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
+  "name": "Codespaces Desktop Test",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "version": "latest",
+      "password": "vscode"
+    }
   },
-  "forwardPorts": [6080, 5901, 5000],
+  "forwardPorts": [6080, 5901],
   "portsAttributes": {
     "6080": {
-      "label": "MT5 Desktop GUI (noVNC)",
+      "label": "Desktop GUI (noVNC)",
       "onAutoForward": "openBrowser"
-    },
-    "5901": {
-      "label": "Direct VNC Client",
-      "onAutoForward": "silent"
-    },
-    "5000": {
-      "label": "Trading API / Dashboard",
-      "onAutoForward": "silent"
     }
   },
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "python.defaultInterpreterPath": "/usr/bin/python3"
-      },
-      "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance"
-      ]
-    }
-  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y python3-tk",
   "containerEnv": {
-    "DISPLAY": ":1",
-    "WINEPREFIX": "/home/vscode/.wine",
-    "WINEDEBUG": "-all"
+    "DISPLAY": ":1"
   },
   "remoteUser": "vscode"
 }
